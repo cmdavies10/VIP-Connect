@@ -11,5 +11,5 @@ app.get('/express_backend', (req, res) => {
 });
 
 app.get('/', function(req, res) {
-	res.sendFile(path.join(__dirname, 'index.js'));
+	res.send({ express: 'YOUR EXPRESS BACKEND IS CONNECTED TO REACT' });
 });
