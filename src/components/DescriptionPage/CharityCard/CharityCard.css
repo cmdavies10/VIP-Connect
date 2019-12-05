@@ -1,0 +1,19 @@
+
+.charity-card{
+    background-color : rgb(161, 213, 233);
+    width: 400px;
+    height: 100px;
+}
+
+.charity-text{
+    color: brown;
+}
+
+
+.image-card{
+    background-color : rgb(91, 201, 40);
+    width: 100px;
+    height: 100px;
+}
+
+

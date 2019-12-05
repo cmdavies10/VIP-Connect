@@ -2,7 +2,7 @@ import React from 'react'
 import './DescriptionTitle.css'
 
 
-class MyConcertsTitle extends React.Component {
+class DescriptionTitle extends React.Component {
     constructor(props){
         super(props)
         this.state = {
@@ -19,11 +19,11 @@ class MyConcertsTitle extends React.Component {
 
         return (
             <div>
-                <h1 className='titleFive'>{message}</h1>
-                <h4 className='titleSix'>{message2}</h4>
+                <h1 className='titleSeven'>{message}</h1>
+                <h4 className='titleEight'>{message2}</h4>
             </div>
         )
     }
 }
 
-export default MyConcertsTitle
+export default DescriptionTitle

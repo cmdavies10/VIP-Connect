@@ -1,28 +1,26 @@
 import React from 'react'
-import './MyConcertsCard.css'
+import './ButtonBuy.css'
 
 
-class MyConcertsCard extends React.Component {
+class ButtonBuy extends React.Component {
     constructor(props){
         super(props)
         this.state = {
-            message: 'My Concerts Card Info',
+            message: 'Buy Button will be here',
             }
         }
     
 
     render(){
         const message = this.state.message
-        
         // const user = this.state.user
 
         return (
             <div>
-                <h4 className='concerts-card'>{message}</h4>
-                
+                <button className='buyBtn'>{message}</button>
             </div>
         )
     }
 }
 
-export default MyConcertsCard
+export default ButtonBuy

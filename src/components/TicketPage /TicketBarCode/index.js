@@ -1,28 +1,26 @@
 import React from 'react'
-import './MyConcertsCard.css'
+import './TicketBarCode.css'
 
 
-class MyConcertsCard extends React.Component {
+class TicketBarCode extends React.Component {
     constructor(props){
         super(props)
         this.state = {
-            message: 'My Concerts Card Info',
+            message: 'Bar Code Here',
             }
         }
     
 
     render(){
         const message = this.state.message
-        
         // const user = this.state.user
 
         return (
             <div>
-                <h4 className='concerts-card'>{message}</h4>
-                
+                <h2 className='bar-code'>{message}</h2>
             </div>
         )
     }
 }
 
-export default MyConcertsCard
+export default TicketBarCode
