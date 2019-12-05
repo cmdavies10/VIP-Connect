@@ -19,11 +19,11 @@ const Event = db.define(
 			allowNull: false,
 			// allowNull defaults to true
 		},
-		package: {
-			type: Sequelize.STRING,
-			allowNull: false,
-			// allowNull defaults to true
-		},
+		// packages: {
+		// 	type: Sequelize.STRING,
+		// 	allowNull: false,
+		// 	// allowNull defaults to true
+		// },
 		// googleId: {
 		// 	type: Sequelize.STRING,
 		// },
