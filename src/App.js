@@ -1,7 +1,8 @@
+
+// import Validate from "./components/Validation";
+
 import React from 'react'
 import './App.css';
-
-
 import NavBar from './components/NavBar'
 
 import MainTitle from './components/LoginPage/MainTitle'
@@ -18,11 +19,6 @@ import CreateForm from './components/EventFormPage/CreateForm'
 import PackageCard from './components/EventFormPage/PackageCard'
 // import ButtonCreate from './components/EventFormPage/ButtonSubmit'
 import DescriptionCard from './components/DescriptionPage/DescriptionCard'
-
-
-
-
-
 
 function App() {
   return (
@@ -49,6 +45,29 @@ function App() {
 
     </div>
   );
+  
+//   class App extends Component {
+// 	render() {
+// 		return (
+// 			<div>
+// 				<Validate>
+// 					<form action="/login" method="post">
+// 						<div>
+// 							<label>Username:</label>
+// 							<input type="text" name="username" />
+// 						</div>
+// 						<div>
+// 							<label>Password:</label>
+// 							<input type="password" name="password" />
+// 						</div>
+// 						<div>
+// 							<input type="submit" value="Log In" />
+// 						</div>
+// 					</form>
+// 				</Validate>
+// 			</div>
+// 		);
+// 	}
 }
 
 export default App;
