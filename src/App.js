@@ -20,7 +20,6 @@ import CreateTitle from './components/EventFormPage/CreateTitle';
 import CreateForm from './components/EventFormPage/CreateForm';
 import PackageCard from './components/EventFormPage/PackageCard';
 // import ButtonCreate from './components/EventFormPage/ButtonSubmit'
-<<<<<<< HEAD
 import DescriptionTitle from './components/DescriptionPage/DescriptionTitle'
 import DescriptionCard from './components/DescriptionPage/DescriptionCard'
 import ImageCard from './components/DescriptionPage/ImageCard'
@@ -34,58 +33,10 @@ import TicketTitle from './components/TicketPage /TicketTitle'
 import TicketDescriptionCard from './components/TicketPage /TicketDescriptionCard'
 import TicketBarCode from './components/TicketPage /TicketBarCode'
 import ButtonReturn from './components/TicketPage /ButtonReturn'
-=======
-import DescriptionCard from './components/DescriptionPage/DescriptionCard';
-
-export default class App extends Component {
-
-// import React, { Component } from 'react';
-
-// import Validate from "./components/Validation";
->>>>>>> master
 
 
-class App extends React.Component {
+export default class App extends React.Component {
 
-<<<<<<< HEAD
-function App() {
-  return (
-    <div className="App">
-    
-      {/* <HomePage />   */}
-     
-      <NavBar />
-
-      <MainTitle /> 
-      <LogInForm />  
-      <ButtonCreate /> 
-      <OptionsTitle /> 
-      <OptionsCard /> 
-      <ButtonSubmit /> 
-      <MyConcertsCard /> 
-      <MyConcertsTitle />
-      <CreateTitle />
-      <CreateForm />
-      <PackageCard />
-      <DescriptionTitle/>
-      <DescriptionCard/>
-      <ImageCard/>
-      <CharityCard/>
-      <ButtonEdit/>
-      <ButtonBuy/>
-      <BuyTitle/>
-      <BuyForm/>
-      <BuyDescription/>
-      <TicketTitle/>
-      <TicketDescriptionCard/>
-      <TicketBarCode/>
-      <ButtonReturn/>
-
-    
-
-    </div>
-  );
-=======
 	state = {
 		data: null
 	};
@@ -112,7 +63,6 @@ function App() {
 			</div>
 		);
 	}
->>>>>>> master
 }
 
 //   class App extends Component {
