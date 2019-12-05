@@ -39,9 +39,9 @@ class App extends React.Component {
 		return (
 			<div className="App">
 				{/* <HomePage />   */}
-
-				<NavBar />
-
+       
+				  <NavBar />
+      
 				<MainTitle />
 				<LogInForm />
 				<ButtonCreate />
