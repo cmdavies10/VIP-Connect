@@ -1,6 +1,5 @@
 # REQUIREMENTS CHECKLIST
 
-<<<<<<< HEAD
 | Requirements                                               | (Y/N/WIP/Undecided) | Tech                                       |
 | ---------------------------------------------------------- | ------------------- | ------------------------------------------ |
 | React                                                      | Y                   | React, react-dom                           |
@@ -12,19 +11,6 @@
 | Polished UI                                                | WIP                 | Undecided                                  |
 | Quality Coding Stds                                        | WIP                 | Brains                                     |
 | Protection of Sensitive Inforation                         | WIP                 | Undecided (potentially .env or secrets.js) |
-=======
-Requirements | (Y/N/WIP/Undecided) | Tech
------------- | -------------   | -------------
-React | Y | React, react-dom
-Node/Express Server | Y | Node/Express
-MySQL or MongoDB Database with a Sequelize or Mongoose ORM | Undecided
-GET and POST routes | Y
-Two libraries, packages, or technologies | WIP | socketio, passport, passport-local
-User authentication | WIP | passport & passport-local
-Polished UI | WIP | Undecided
-Quality Coding Stds | WIP | Brains
-Protection of Sensitive Inforation | WIP | Undecided (potentially .env or secrets.js)
->>>>>>> cf882d96afc20a511160ae516f34359c75e412e5
 
 # POTENTIAL APP NAMES
 
