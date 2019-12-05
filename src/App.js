@@ -1,3 +1,4 @@
+
 import React, { Component } from 'react';
 
 // import Validate from "./components/Validation";
@@ -22,8 +23,16 @@ import PackageCard from './components/EventFormPage/PackageCard';
 import DescriptionCard from './components/DescriptionPage/DescriptionCard';
 
 export default class App extends Component {
+
+// import React, { Component } from 'react';
+
+// import Validate from "./components/Validation";
+
+
+class App extends React.Component {
+
 	state = {
-		data: null,
+		data: null
 	};
 
 	render() {
@@ -49,6 +58,7 @@ export default class App extends Component {
 		);
 	}
 }
+
 //   class App extends Component {
 // 	render() {
 // 		return (
@@ -72,3 +82,4 @@ export default class App extends Component {
 // 		);
 // 	}
 //
+
