@@ -1,4 +1,4 @@
-import Validate from "./components/Validation";
+// import Validate from "./components/Validation";
 import React from "react";
 import NavBar from "./components/NavBar";
 import MainTitle from "./components/LoginPage/MainTitle";
@@ -44,3 +44,5 @@ class App extends React.Component {
 		);
 	}
 }
+
+export default App;
