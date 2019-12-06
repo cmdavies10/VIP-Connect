@@ -1,20 +1,81 @@
-const morgan = require('morgan');
-const bodyParser = require('body-parser');
+require("dotenv").config();
 
-var express = require('express');
+const morgan = require("morgan");
+const bodyParser = require("body-parser");
+
+var express = require("express");
 
 var app = express();
 
+// google auth
+var GoogleStrategy = require("passport-google-oauth20").Strategy;
+
 // Middleware
-app.use(morgan('dev'));
+app.use(morgan("dev"));
 app.use(bodyParser.json());
 app.use(bodyParser.urlencoded({ extended: true }));
 
-app.use(express.static('public'));
+app.use(express.static("public"));
 
-app.get('/hello', function(req, res) {
-	res.send({ express: 'Hello World. Server is up b*tchez' });
+app.get("/hello", function(req, res) {
+	res.send({ express: "Hello World. Server is up b*tchez" });
 });
+
+// middleware google auth routes
+app.get(
+	"/auth/google",
+	passport.authenticate("google", { scope: ["profile"] })
+);
+
+app.get(
+	"/auth/google/callback",
+	passport.authenticate("google", { failureRedirect: "/" }),
+	function(req, res) {
+		// Successful authentication, redirect home.
+		res.redirect("/");
+	}
+);
+
+passport.use(
+	new GoogleStrategy(
+		{
+			clientID: process.env["GOOGLE_CLIENT_ID"],
+			clientSecret: process.env["GOOGLE_CLIENT_SECRET"],
+			callbackURL: "/"
+		},
+		function(accessToken, refreshToken, profile, cb) {
+			User.findOrCreate({ googleId: profile.id }, function(err, user) {
+				return cb(err, user);
+			});
+		}
+	)
+);
+
+// Configure Passport authenticated session persistence.
+// ======================================================================
+// In order to restore authentication state across HTTP requests, Passport needs
+// to serialize users into and deserialize users out of the session.  In a
+// production-quality application, this would typically be as simple as
+// supplying the user ID when serializing, and querying the user record by ID
+// from the database when deserializing.  However, due to the fact that this
+// example does not have a database, the complete profile is serialized
+// and deserialized.
+passport.serializeUser(function(user, cb) {
+	cb(null, user);
+});
+
+passport.deserializeUser(function(obj, cb) {
+	cb(null, obj);
+});
+
+// Initialize Passport and restore authentication state, if any, from the
+// session.
+app.use(passport.initialize());
+app.use(passport.session());
+
+// DEFINE ROUTES WITH PASSPORT.AUTHENTICATE BELOW
+
+// END PASSPORT ROUTES
 
 module.exports = app;
 

@@ -1,7 +1,3 @@
-// Requiring our models
-// ===============================================================
-
-// someDB to be changed
 var db = require("../models");
 
 // Routes
