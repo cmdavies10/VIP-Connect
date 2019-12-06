@@ -2,7 +2,7 @@ const Sequelize = require('sequelize');
 const db = require('./index');
 
 const Event = db.define(
-	'event',
+	'events',
 	{
 		// attributes
 		venue: {
@@ -15,22 +15,22 @@ const Event = db.define(
 			// allowNull defaults to true
 		},
 		date: {
-			type: Sequelize.DATEONLY,
+			type: Sequelize.STRING,
 			allowNull: false,
 			// allowNull defaults to true
 		},
-		// packages: {
-		// 	type: Sequelize.STRING,
-		// 	allowNull: false,
-		// 	// allowNull defaults to true
-		// },
+		packages: {
+			type: Sequelize.STRING,
+			allowNull: false,
+			// allowNull defaults to true
+		},
 		// googleId: {
 		// 	type: Sequelize.STRING,
 		// },
-	},
-	{
-		// options
 	}
+	// {
+	// 	// options
+	// }
 );
 
 module.exports = Event;

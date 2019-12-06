@@ -22,7 +22,7 @@ router.post('/packages', (req, res) => {
 		venue: req.body.venue,
 		artist: req.body.artist,
 		date: req.body.date,
-		packageinfo: req.body.packageinfo,
+		packageInfo: req.body.packageinfo,
 	}).then(function(dbPackages) {
 		res.json(dbPackages);
 	});
