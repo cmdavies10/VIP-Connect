@@ -23,7 +23,7 @@ app.use(
 	session({ secret: "keyboard cat", resave: true, saveUninitialized: true })
 );
 
-// Initialize Passport and restore authentication state, if any, from the
+// Initializegit Passport and restore authentication state, if any, from the
 // session.
 app.use(passport.initialize());
 app.use(passport.session());
