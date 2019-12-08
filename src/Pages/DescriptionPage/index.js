@@ -1,91 +1,149 @@
 import React from 'react'
 import './index.css'
-import Container from 'react-bootstrap/Container'
-import Col from 'react-bootstrap/Col'
 import Card from 'react-bootstrap/Card'
-import Row from 'react-bootstrap/Row'
+import Button from 'react-bootstrap/Button'
+import Container from 'react-bootstrap/Container'
+import Navbar from 'react-bootstrap/Navbar'
+import Nav from 'react-bootstrap/Nav'
+import Carousel from 'react-bootstrap/Carousel'
 
-
-
-
-export default function DescriptionPage (){
+export default function OptionsPage (){
     return (
-        <div>
+
+  <div class="container-background-none" id="tinted-image">
+      {/* /* ------------------logo-------------------------- */ }
+      <div class="logo-container">
+       <h6 class="grow">VIPFAN</h6>
+     </div>
+
+ {/* /* ------------------page titles-------------------------- */ }
+ <Container>
+      <div class="title-container">  
+          <p>
+          Meet the Band! 
+          </p>
+          <h1>Metalica</h1>
+       </div>
+
+
+{/* --------------caruselle-------------------------- */}
+
+<Carousel>
+  <Carousel.Item>
+    <img
+      className="d-block w-100"
+      src="https://townsquare.media/site/366/files/2011/12/Metallica.jpg?w=980&q=75"
+      alt="First slide"
+    />
+    <Carousel.Caption>
+      <h3>All exclusive experience a dinner with your favorite Band at the most elegant private dining rooms in Mayfair awarded a Michelin star. </h3>
+      <p1>Dates might change depending on the availability of the artist.</p1>
+    </Carousel.Caption>
+    
+  </Carousel.Item>
+  <Carousel.Item>
+    <img
+      className="d-block w-100"
+      src="https://i.ytimg.com/vi/ug-cz4eETMg/maxresdefault.jpg"
+      alt="Third slide"
+    />
+
+    <Carousel.Caption>
+      <h3>Meet the Band at back stage and get a chance to talk to each of them in person. </h3>
+      <p1>Photo opportunities have to be limited.</p1>
+    </Carousel.Caption>
+  </Carousel.Item>
+  <Carousel.Item>
+    <img
+      className="d-block w-100"
+      src="https://cdn.firespring.com/images/96d50d65-35dd-4119-ae9d-bc8467de93fa.jpeg"
+    />
+
+    <Carousel.Caption>
+      <h3>All Within My Hands </h3>
+      <p1>The Foundation aims to assist and enrich the lives of members of the communities who have supported the band for years, as well as encourage participation from fans and friends.</p1>
+    </Carousel.Caption>
+  </Carousel.Item>
+</Carousel>
+
+
             
+{/* --------------------cards------------------------- */}
+ 
+<div class="card-container">
 
-<Container>
-  <Row>
-    <Col sm={8}>sm=8</Col>
-    <Col sm={4}>sm=4</Col>
-  </Row>
-  <Row>
-    <Col sm>sm=true
-    <Card className="bg-dark text-white">
-  <Card.Img src="holder.js/100px270" alt="Card image" />
-  <Card.ImgOverlay>
-    <Card.Title>Card title</Card.Title>
-    <Card.Text>
-      This is a wider card with supporting text below as a natural lead-in to
-      additional content. This content is a little bit longer.
-    </Card.Text>
-    <Card.Text>Last updated 3 mins ago</Card.Text>
-  </Card.ImgOverlay>
-</Card>
-    </Col>
-
-    <Col sm>
-    sm=true
-    <Card className="bg-dark text-white">
-  <Card.Img src="holder.js/100px270" alt="Card image" />
-  <Card.ImgOverlay>
-    <Card.Title>Card title</Card.Title>
-    <Card.Text>
-      This is a wider card with supporting text below as a natural lead-in to
-      additional content. This content is a little bit longer.
-    </Card.Text>
-    <Card.Text>Last updated 3 mins ago</Card.Text>
-  </Card.ImgOverlay>
-</Card>
-    </Col>
-
-    <Col sm>
-    sm=true
-    <Card className="bg-dark text-white">
-  <Card.Img src="holder.js/100px270" alt="Card image" />
-  <Card.ImgOverlay>
-    <Card.Title>Card title</Card.Title>
-    <Card.Text>
-      This is a wider card with supporting text below as a natural lead-in to
-      additional content. This content is a little bit longer.
-    </Card.Text>
-    <Card.Text>Last updated 3 mins ago</Card.Text>
-  </Card.ImgOverlay>
-</Card>
-</Col>
-  </Row>
-</Container>
-
-{/* /////////////////////////////////////////////// */}
-
-<Card style={{ width: '18rem' }}>
+<Card class="big-card">
+  <Card.Header>
+    <Nav variant="pills" defaultActiveKey="#first">
+      <Nav.Item>
+        <Nav.Link href="#first">Active</Nav.Link>
+      </Nav.Item>
+      <Nav.Item>
+        <Nav.Link href="#link">Link</Nav.Link>
+      </Nav.Item>
+      <Nav.Item>
+        <Nav.Link href="#disabled" disabled>
+          Disabled
+        </Nav.Link>
+      </Nav.Item>
+    </Nav>
+  </Card.Header>
   <Card.Body>
-    <Card.Title>Card Title</Card.Title>
-    <Card.Subtitle className="mb-2 text-muted">Card Subtitle</Card.Subtitle>
+    <Card.Title>Special title treatment</Card.Title>
     <Card.Text>
-      Some quick example text to build on the card title and make up the bulk of
-      the card's content.
+      With supporting text below as a natural lead-in to additional content.
     </Card.Text>
-    <Card.Link href="#">Card Link</Card.Link>
-    <Card.Link href="#">Another Link</Card.Link>
+    <Button variant="primary">Go somewhere</Button>
   </Card.Body>
 </Card>
 
-{/* ////////////////////////////////////////////// */}
 
-            
-        </div>
+
+{/* //////////////////////cards///////////////////////// */}
+
+{/* //////////////////////cards///////////////////////// */}
+ 
+{/* //////////////////////cards///////////////////////// */}
+
+{/* //////////////////////cards///////////////////////// */}
+ 
+{/* //////////////////////cards///////////////////////// */}
+
+{/* //////////////////////cards///////////////////////// */}
+
+{/* //////////////////////cards///////////////////////// */}
+
+</div>
+</Container>
+
+
+{/* ---------------- navbar botom---------------------*/}
+          {/* <Navbar sticky="bottom" /> */}
+          <Navbar collapseOnSelect expand="lg"  variant="dark" sticky="bottom">
+              <Navbar.Toggle aria-controls="responsive-navbar-nav" />
+              <Navbar.Collapse id="responsive-navbar-nav">
+               <Nav className="mr-auto">
+               <Nav.Link href="#features">Home</Nav.Link>
+            </Nav>
+            <Nav>
+              <Nav.Link class="text" href="#pricing">See Events</Nav.Link>
+              <Nav.Link href="#features">Buy</Nav.Link>
+              <Nav.Link href="#features">Create</Nav.Link>
+              <Nav.Link href="#pricing">My Tickets</Nav.Link>
+            </Nav>
+        </Navbar.Collapse>
+        </Navbar>
+      
+
+                            
+ </div>
     )
 }
+
+
+// -------------------caruselle here----------------------///
+
+
 
 
 
