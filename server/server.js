@@ -1,5 +1,6 @@
 const morgan = require('morgan');
 const bodyParser = require('body-parser');
+// var db = require('./models');
 
 var express = require('express');
 
@@ -10,11 +11,19 @@ app.use(morgan('dev'));
 app.use(bodyParser.json());
 app.use(bodyParser.urlencoded({ extended: true }));
 
-app.use(express.static('public'));
+// app.use(express.static('public'));
 
 app.get('/hello', function(req, res) {
 	res.send({ express: 'Hello World. Server is up b*tchez' });
 });
+
+app.use('/users', require('../routes/userRoutes'));
+
+app.use('/packages', require('../routes/packages'));
+
+// app.use('/users', require('../routes/userRoutes'));
+
+// app.use('/users', require('../routes/userRoutes'));
 
 module.exports = app;
 

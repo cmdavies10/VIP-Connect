@@ -1,15 +1,16 @@
 var express = require('express');
 var router = express.Router();
-var db = require('./../models/index.js');
+var db = require('../models/index.js');
+var Artist = require('../models/Artists');
 
 router.get('/artists', (req, res) => {
-	db.Artist.findAll({}).then(function(dbArtists) {
+	Artist.findAll({}).then(function(dbArtists) {
 		res.json(dbArtists);
 	});
 });
 
 router.post('/artists', (req, res) => {
-	db.Artist.create({
+	Artist.create({
 		name: req.body.name,
 		password: req.body.password,
 	}).then(function(dbArtists) {
@@ -18,7 +19,7 @@ router.post('/artists', (req, res) => {
 });
 
 router.put('/artists/:id', (req, res) => {
-	db.Artist.update(
+	Artist.update(
 		{
 			name: req.body.name,
 			password: req.body.password,
@@ -34,7 +35,7 @@ router.put('/artists/:id', (req, res) => {
 });
 
 router.delete('/artists/:id', (req, res) => {
-	db.Artist.destroy(
+	Artist.destroy(
 		{
 			name: req.body.name,
 			password: req.body.password,
