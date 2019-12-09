@@ -1,0 +1,21 @@
+.container-background {
+    width: 100vw;
+    height: 100vh;
+    position: relative;
+    margin: 0;
+    padding: 0;
+  
+    background: url("../../components/images/giphy.gif");
+  
+    background-size: 100%;
+    display: block;
+    background-position: center;
+    background-repeat: no-repeat;
+    background-size: cover;
+    -webkit-background-size: cover;
+    -moz-background-size: cover;
+    -o-background-size: cover;
+    background-size: cover;
+    overflow: hidden;
+    box-shadow: inset 50px 100px 600px black;
+  }
