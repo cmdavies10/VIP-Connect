@@ -1,4 +1,4 @@
-import React from 'react'
+import React,{Component} from 'react'
 import './index.css'
 // import Jumbotron from 'react-bootstrap/Jumbotron'
 import Navbar from 'react-bootstrap/Navbar'
@@ -11,7 +11,21 @@ import Col from 'react-bootstrap/Col'
 
 
 
-export default function LogInPage (){
+class LogInPage extends Component{
+     state= {
+       user : "",
+       password : ""
+     }
+     handleSubmit=(event)=>{
+       event.preventDefault() 
+console.log("Hello");
+console.log(event);
+     }
+
+
+
+
+   render(){
     return (
 
     <div class="container-background" id="tinted-image">
@@ -35,11 +49,9 @@ export default function LogInPage (){
                       <Form.Control type="password" placeholder="Password" class="form-control" id="exampleInputPassword1"/>
              </Form.Group>
               </Form.Row>
-                <Button variant="primary" type="submit" btn="rounded grow">
+                <Button variant="primary" type="submit" onClick={()=> this.handleSubmit()} btn="rounded grow">
                   Submit
                  </Button>
-
-                 {/* <div class="button_cont"><a class="example_e" href="add-website-here" target="_blank" rel="nofollow noopener">Add Call to Action</a></div> */}
                  
                  <Button variant="primary" type="submit" btn="rounded grow">
                   Create
@@ -48,9 +60,9 @@ export default function LogInPage (){
            </div>
 
            </Container>
-              {/* ---------------- navbar botom---------------------*/}
-          {/* <Navbar sticky="bottom" /> */}
-              <Navbar collapseOnSelect expand="lg"  variant="dark" sticky="bottom">
+         {/* ------------ navbarbotom---------------------*/}
+         
+          <Navbar collapseOnSelect expand="lg"  variant="dark" sticky="bottom">
               <Navbar.Toggle aria-controls="responsive-navbar-nav" />
               <Navbar.Collapse id="responsive-navbar-nav">
                <Nav className="mr-auto">
@@ -63,12 +75,13 @@ export default function LogInPage (){
               <Nav.Link href="#pricing">My Tickets</Nav.Link>
             </Nav>
         </Navbar.Collapse>
-        </Navbar>
-
-            
-       
-      </div>
+        </Navbar>                         
+  </div>
+     
      
       
     )
+  }
 }
+
+export default LogInPage

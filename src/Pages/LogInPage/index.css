@@ -5,7 +5,7 @@
   /* background-color: rgb(248, 241, 241); */
   /* box-shadow: inset 200px 2px 250px  black; */
   background-color: #202020;
-  z-index: 11;
+  /* z-index: 11; */
   /* opacity: 0.9;
   filter: alpha(opacity=90); */
 }
@@ -24,7 +24,7 @@ h6 {
   text-transform: uppercase;
   top: 15%;
   width: 100%;
-  z-index: 10;
+  /* z-index: 10; */
   animation: move linear 2500ms infinite;
 }
 
@@ -37,11 +37,10 @@ h6 {
       -1px 1px 0 rgb(46, 75, 240);
   }
   25% {
-    text-shadow: -4px -4px 0 rgb(46, 75, 240),
-      -3px -3px 0 rgb(46, 75, 240), -2px -2px 0 rgb(46, 75, 240),
-      -1px -1px 0 rgb(46, 75, 240), 4px 4px 0 hsla(0, 100%, 50%, 1),
-      3px 3px 0 hsla(0, 100%, 50%, 1), 2px 2px 0 hsla(0, 100%, 50%, 1),
-      1px 1px 0 hsla(0, 100%, 50%, 1);
+    text-shadow: -4px -4px 0 rgb(46, 75, 240), -3px -3px 0 rgb(46, 75, 240),
+      -2px -2px 0 rgb(46, 75, 240), -1px -1px 0 rgb(46, 75, 240),
+      4px 4px 0 hsla(0, 100%, 50%, 1), 3px 3px 0 hsla(0, 100%, 50%, 1),
+      2px 2px 0 hsla(0, 100%, 50%, 1), 1px 1px 0 hsla(0, 100%, 50%, 1);
   }
   50% {
     text-shadow: -4px 4px 0 hsla(0, 100%, 50%, 1),
@@ -80,7 +79,7 @@ h6 {
   position: relative;
   margin: 0;
   padding: 0;
-  z-index: -3;
+  /* z-index: -3; */
   /* background:  */
   /* top, transparent red, faked with gradient */
   /* linear-gradient(
@@ -110,32 +109,30 @@ h6 {
   box-shadow: inset 50px 100px 600px black;
 }
 
-
 /* -------------------------------form----------------------------------------- */
 
-.container-log-form{
-  z-index: -1;
+.container-log-form {
+  /* z-index: -1; */
   display: flex;
   align-items: center;
   justify-content: center;
   margin-top: 30%;
 }
 
-.label{
+.label {
   color: #ffffff;
   font-weight: 200;
   margin-bottom: 0.1rem;
 }
 
 .form-control {
-  background-color:  #202020;
+  background-color: #202020;
   border-color: transparent;
   box-shadow: inset 1px 1px 5px black;
-  color:black;
+  color: black;
   /* border-radius: 100p; */
   opacity: 0.5;
   /* border-color:  rgb(46, 75, 240); */
-  
 }
 
 .btn {
@@ -148,7 +145,7 @@ h6 {
   border-radius: 6px;
   /* display: inline-block; */
   transition: all 0.3s ease 0s;
-  z-index: 10;
+  /* z-index: 10; */
   border-spacing: 15px;
   margin: 5px;
   /* border-radius: 10px; */
@@ -182,17 +179,14 @@ h6 {
   font-weight: 700 !important;
   letter-spacing: 3px;
   background: none;
-  -webkit-box-shadow: 0px 5px 40px -10px rgba(0,0,0,0.57);
-  -moz-box-shadow: 0px 5px 40px -10px rgba(0,0,0,0.57);
+  -webkit-box-shadow: 0px 5px 40px -10px rgba(0, 0, 0, 0.57);
+  -moz-box-shadow: 0px 5px 40px -10px rgba(0, 0, 0, 0.57);
   transition: all 0.3s ease 0s;
-  }
-
-
+}
 
 /* ///////////////////////////////////////////// */
 
 .nav-link a {
-  color:  red;
+  color: red;
   /* background-color:  rgb(205, 242, 242); */
-
 }

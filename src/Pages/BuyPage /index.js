@@ -3,26 +3,74 @@ import './index.css'
 import Form from 'react-bootstrap/Form'
 import Col from 'react-bootstrap/Col'
 import Button from 'react-bootstrap/Button'
+import Container from 'react-bootstrap/Container'
 
 export default function BuyPage (){
     return (
-        <div>
+       
+      
+  <div class="container-background-none" id="tinted-image">
+      {/* /* ------------------logo-------------------------- */ }
+      <div class="logo-container">
+       <h6 class="grow">VIPFAN</h6>
+     </div>
+
+ {/* /* ------------------page titles-------------------------- */ }
+   <Container>
+      <div class="title-container">  
+          <p>
+            You are almost there get your ticket and 
+          </p>
+          <h1>Meet the Band!</h1>
+       </div>
             
-            <Form>
+{/* --------------------cards------------------------- */}
+
+
+            <Form class="form-body">
+  <Form.Row>
+    <Form.Group as={Col} controlId="formGridFirstName">
+      <Form.Label>First Name</Form.Label>
+      <Form.Control type="FirstName" placeholder="Enter First Name" />
+    </Form.Group>
+
+    <Form.Group as={Col} controlId="formGridLastName">
+      <Form.Label>Last Name</Form.Label>
+      <Form.Control type="LastName" placeholder="Enter Last Name" />
+    </Form.Group>
+  </Form.Row>
+
   <Form.Row>
     <Form.Group as={Col} controlId="formGridEmail">
       <Form.Label>Email</Form.Label>
       <Form.Control type="email" placeholder="Enter email" />
     </Form.Group>
 
-    <Form.Group as={Col} controlId="formGridPassword">
-      <Form.Label>Password</Form.Label>
-      <Form.Control type="password" placeholder="Password" />
+    <Form.Group as={Col} controlId="formGridContactNumber">
+      <Form.Label>Contact Number</Form.Label>
+      <Form.Control type="ContactNumber" placeholder="Enter Contact Number" />
+    </Form.Group>
+  </Form.Row>
+
+  <Form.Group controlId="formGridCreditCardNumber">
+    <Form.Label>Credit Card Number</Form.Label>
+    <Form.Control type="CreditCardNumber" placeholder="Enter Credit Card Number" />
+  </Form.Group>
+
+  <Form.Row>
+    <Form.Group as={Col} controlId="formGridSecurityCode">
+      <Form.Label>Security Code</Form.Label>
+      <Form.Control type="SecurityCode" placeholder="Enter security Code" />
+    </Form.Group>
+
+    <Form.Group as={Col} controlId="formGridExpirationDate">
+      <Form.Label>Expiration Date</Form.Label>
+      <Form.Control type="ExpirationDate" placeholder="Enter Expiration Date" />
     </Form.Group>
   </Form.Row>
 
   <Form.Group controlId="formGridAddress1">
-    <Form.Label>Address</Form.Label>
+    <Form.Label>Billing Address</Form.Label>
     <Form.Control placeholder="1234 Main St" />
   </Form.Group>
 
@@ -51,9 +99,7 @@ export default function BuyPage (){
     </Form.Group>
   </Form.Row>
 
-  <Form.Group id="formGridCheckbox">
-    <Form.Check type="checkbox" label="Check me out" />
-  </Form.Group>
+
 
   <Button variant="primary" type="submit">
     Submit
@@ -61,8 +107,8 @@ export default function BuyPage (){
 
 </Form>
 
-   
-        </div>
+</Container>
+</div>
     )
 }
 

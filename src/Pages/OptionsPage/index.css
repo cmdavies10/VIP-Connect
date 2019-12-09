@@ -4,12 +4,8 @@
   padding: 10px 30px;
   width: 100%;
   height: 120px;
-  /* background-color: rgb(248, 241, 241); */
-  /* box-shadow: inset 200px 2px 250px  black; */
   background-color: #202020;
-  z-index: 11;
-  /* opacity: 0.9;
-  filter: alpha(opacity=90); */
+  
 }
 
 @import url(https://fonts.googleapis.com/css?family=Varela+Round);
@@ -26,7 +22,7 @@ h6 {
   text-transform: uppercase;
   top: 15%;
   width: 100%;
-  z-index: 10;
+  /* z-index: 10; */
   animation: move linear 2500ms infinite;
 }
 
@@ -90,46 +86,20 @@ h6 {
 
 /* -------------------------------form----------------------------------------- */
 
-.container-log-form{
-  z-index: -1;
-  display: flex;
-  align-items: center;
-  justify-content: center;
-  margin-top: 30%;
-}
 
-.label{
-  color: #ffffff;
-  font-weight: 200;
-  margin-bottom: 0.1rem;
-}
-
-.form-control {
-  background-color:  #202020;
-  border-color: transparent;
-  box-shadow: inset 1px 1px 5px black;
-  color:black;
-  /* border-radius: 100p; */
-  opacity: 0.5;
-  /* border-color:  rgb(46, 75, 240); */
-  
-
-}
 
 .title-container {
-  margin-top: 50px;
-  /* background: red; */
-  height: 400px;
+  height: 100px;
   color: hsla(0, 0%, 0%, 0.9);
   /* font: normal 80px Varela Round, sans-serif; */
   /* height: 40px; */
   left: 0;
   /* letter-spacing: 5px; */
-  margin: 40px 0 0 0;
+  margin: 70px 0 0 0;
   position: absolute;
   text-align: center;
   width: 100%;
-  z-index: 10;
+  /* z-index: 10; */
   font-size: 1rem;
   top: 12%;
   align-items: center;
@@ -156,17 +126,17 @@ h1{
   display: flex;
   flex-wrap: wrap;
   justify-content: space-between;
-  margin-top: 90px;
+  margin-top: 100px;
 }
 
 
 .card {
-  /* display: flex;
+  display: flex;
   flex-wrap: wrap;
-  justify-content: space-between; */
-  width: 19%;
+  justify-content: space-between;
+  /* width: 19%; */
   box-shadow: 2px 2px 10px rgb(0, 0, 0, 0.5);
-  margin: 7px;
+  margin: 5px;
   text-align: center;
   /* background: red; */
 }

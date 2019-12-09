@@ -180,10 +180,7 @@ export default function OptionsPage (){
               <Nav.Link href="#pricing">My Tickets</Nav.Link>
             </Nav>
         </Navbar.Collapse>
-        </Navbar>
-      
-
-                            
+        </Navbar>                         
  </div>
     )
 }
