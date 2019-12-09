@@ -6,6 +6,7 @@ import Container from "react-bootstrap/Container";
 import Navbar from "react-bootstrap/Navbar";
 import Nav from "react-bootstrap/Nav";
 import Carousel from "react-bootstrap/Carousel";
+import {Link} from 'react-router-dom'
 
 export default function OptionsPage() {
   return (
@@ -120,26 +121,32 @@ export default function OptionsPage() {
         </div>
       </Container>
 
-      {/* ---------------- navbar botom---------------------*/}
-      {/* <Navbar sticky="bottom" /> */}
-      <Navbar collapseOnSelect expand="lg" variant="dark" sticky="bottom">
+      {/* ------------ navbarbotom---------------------*/}
+         
+      <Navbar collapseOnSelect expand="lg"  variant="dark" sticky="bottom">
         <Navbar.Toggle aria-controls="responsive-navbar-nav" />
-        <Navbar.Collapse id="responsive-navbar-nav">
-          <Nav className="mr-auto">
-            <Nav.Link href="#features">Home</Nav.Link>
+            <Navbar.Collapse id="responsive-navbar-nav">
+              <Nav className="mr-auto">
+              <Link className='btn' to='/loginpage'>Home</Link>
+              {/* <Nav.Link href="#features">Home</Nav.Link> */}
           </Nav>
           <Nav>
-            <Nav.Link class="text" href="#pricing">
-              See Events
-            </Nav.Link>
-            <Nav.Link href="#features">Buy</Nav.Link>
-            <Nav.Link href="#features">Create</Nav.Link>
-            <Nav.Link href="#pricing">My Tickets</Nav.Link>
-          </Nav>
-        </Navbar.Collapse>
-      </Navbar>
+            <Link className='btn' to='/optionspage'>See Events</Link> 
+            {/* <Nav.Link class="text" href="#pricing">See Events</Nav.Link> */}
+
+              <Link className='btn' to='/buypage'>Buy</Link>
+              {/* <Nav.Link href="#features">Buy</Nav.Link> */}
+              
+              <Link className='btn' to='/eventformpage'>Create</Link>
+              {/* <Nav.Link href="#features">Create</Nav.Link> */}
+              
+              <Link className='btn' to='/ticketpage'>My Tickets</Link>
+              {/* <Nav.Link href="#pricing">My Tickets</Nav.Link> */}
+            </Nav>
+           </Navbar.Collapse>
+      </Navbar>                
     </div>
   );
 }
 
-// -------------------caruselle here----------------------///
+
