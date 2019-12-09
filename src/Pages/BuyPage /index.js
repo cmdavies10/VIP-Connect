@@ -4,6 +4,8 @@ import Form from 'react-bootstrap/Form'
 import Col from 'react-bootstrap/Col'
 import Button from 'react-bootstrap/Button'
 import Container from 'react-bootstrap/Container'
+import Navbar from 'react-bootstrap/Navbar'
+import Nav from 'react-bootstrap/Nav'
 
 export default function BuyPage (){
     return (
@@ -108,6 +110,25 @@ export default function BuyPage (){
 </Form>
 
 </Container>
+
+{/* ---------------- navbar botom---------------------*/}
+          {/* <Navbar sticky="bottom" /> */}
+          <Navbar collapseOnSelect expand="lg"  variant="dark" sticky="bottom">
+              <Navbar.Toggle aria-controls="responsive-navbar-nav" />
+              <Navbar.Collapse id="responsive-navbar-nav">
+               <Nav className="mr-auto">
+               <Nav.Link href="#features">Home</Nav.Link>
+            </Nav>
+            <Nav>
+              <Nav.Link class="text" href="#pricing">See Events</Nav.Link>
+              <Nav.Link href="#features">Buy</Nav.Link>
+              <Nav.Link href="#features">Create</Nav.Link>
+              <Nav.Link href="#pricing">My Tickets</Nav.Link>
+            </Nav>
+        </Navbar.Collapse>
+        </Navbar> 
+
+
 </div>
     )
 }
