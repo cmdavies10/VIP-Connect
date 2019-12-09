@@ -15,13 +15,13 @@ function App() {
   return (
     <Router>
       <Switch>
-          <Route exact path="/LogInPage" component={LogInPage}/>
-          <Route exact path="/OptionsPage" component={OptionsPage}/>
-          <Route exact path="/DescriptionPage" component={DescriptionPage}/>
-          <Route exact path="/BuyPage" component={BuyPage}/>
-          <Route exact path="/TicketPage" component={TicketPage}/>
-          <Route exact path="/MyConcertsPage" component={MyConcertsPage}/>
-          <Route exact path="/EventFormPage" component={EventFormPage}/>
+          <Route exact path="/loginpage" component={LogInPage}/>
+          <Route exact path="/optionspage" component={OptionsPage}/>
+          <Route exact path="/descriptionpage" component={DescriptionPage}/>
+          <Route exact path="/buypage" component={BuyPage}/>
+          <Route exact path="/ticketpage" component={TicketPage}/>
+          <Route exact path="/myconcertspage" component={MyConcertsPage}/>
+          <Route exact path="/eventformpage" component={EventFormPage}/>
       </Switch>
     </Router>
   );
