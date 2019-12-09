@@ -3,7 +3,7 @@ const app = require('./server');
 const port = process.env.PORT || 3001;
 
 db.sequelize
-	.sync({ force: true })
+	.sync()
 	// .then(console.log('database is synced'))
 
 	.then(function() {
