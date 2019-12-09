@@ -6,14 +6,14 @@ var db = require('../models');
 
 //mounted on /users
 
-router.get('/packages', (req, res) => {
+router.get('/', (req, res) => {
 	console.log(db.Package);
 	db.Package.findAll({}).then(function(dbPackages) {
 		res.json(dbPackages);
 	});
 });
 
-router.post('/packages', (req, res) => {
+router.post('/', (req, res) => {
 	db.Package.create({
 		type: req.body.type,
 		duration: req.body.duration,
@@ -34,7 +34,7 @@ router.post('/packages', (req, res) => {
 //     res.send(`a post request with /user/post route on port ${PORT}`);
 // })
 
-router.put('/packages/:id', (req, res) => {
+router.put('/:id', (req, res) => {
 	db.Package.update(
 		{
 			type: req.body.type,
@@ -52,7 +52,7 @@ router.put('/packages/:id', (req, res) => {
 	});
 });
 
-router.delete('/packages/:id', (req, res) => {
+router.delete('/:id', (req, res) => {
 	db.Package.destroy(
 		{
 			type: req.body.type,

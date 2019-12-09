@@ -19,7 +19,11 @@ app.get('/hello', function(req, res) {
 
 app.use('/users', require('../routes/userRoutes'));
 
-app.use('/packages', require('../routes/packages'));
+app.use('/packages', require('../routes/packageRouter'));
+
+app.use('/events', require('../routes/eventRouter'));
+
+app.use('/artists', require('../routes/artistRoutes'));
 
 // app.use('/users', require('../routes/userRoutes'));
 
