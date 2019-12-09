@@ -1,19 +1,39 @@
-const morgan = require('morgan');
-const bodyParser = require('body-parser');
+require("dotenv").config();
 
-var express = require('express');
+const morgan = require("morgan");
+const bodyParser = require("body-parser");
+
+var express = require("express");
+var session = require("express-session");
 
 var app = express();
 
+// Requiring passport as we've configured it
+var passport = require("./config/passport");
+
 // Middleware
-app.use(morgan('dev'));
+app.use(morgan("dev"));
 app.use(bodyParser.json());
 app.use(bodyParser.urlencoded({ extended: true }));
 
-app.use(express.static('public'));
+app.use(express.static("public"));
 
-app.get('/hello', function(req, res) {
-	res.send({ express: 'Hello World. Server is up b*tchez' });
+// We need to use sessions to keep track of our user's login status
+app.use(
+	session({ secret: "keyboard cat", resave: true, saveUninitialized: true })
+);
+
+// Initializegit Passport and restore authentication state, if any, from the
+// session.
+app.use(passport.initialize());
+app.use(passport.session());
+
+// Requiring our routes
+require("./routes/html-routes.js")(app);
+require("./routes/api-routes.js")(app);
+
+app.get("/hello", function(req, res) {
+	res.send({ express: "Hello World. Server is up b*tchez" });
 });
 
 module.exports = app;
