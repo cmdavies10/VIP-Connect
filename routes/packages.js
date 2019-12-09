@@ -1,40 +1,46 @@
 var express = require('express');
 var router = express.Router();
 // var path = require("path");
-var db = require('./../models/index.js');
+var db = require('../models');
+// var User = require('../models/User');
+
+//mounted on /users
 
 router.get('/packages', (req, res) => {
+	console.log(db.Package);
 	db.Package.findAll({}).then(function(dbPackages) {
-		res.json(dbPackages);
-	});
-});
-
-router.get('/packages/:id', (req, res) => {
-	db.Package.findOne({
-		where: { id: req.params.id },
-	}).then(function(dbPackages) {
 		res.json(dbPackages);
 	});
 });
 
 router.post('/packages', (req, res) => {
 	db.Package.create({
-		venue: req.body.venue,
-		artist: req.body.artist,
+		type: req.body.type,
+		duration: req.body.duration,
 		date: req.body.date,
-		packageinfo: req.body.packageinfo,
+		price: req.body.price,
 	}).then(function(dbPackages) {
 		res.json(dbPackages);
 	});
 });
 
-router.put('/packages/edit', (req, res) => {
+// router.post("/api/user", (req, res) => {
+//   db.User.read({
+
+//   }).then(function(dbUser){
+//         res.json(dbUser);
+//     });
+
+//     res.send(`a post request with /user/post route on port ${PORT}`);
+// })
+
+router.put('/packages/:id', (req, res) => {
 	db.Package.update(
 		{
-			venue: req.body.venue,
-			artist: req.body.artist,
+			type: req.body.type,
+			duration: req.body.duration,
 			date: req.body.date,
-			packageinfo: req.body.packageinfo,
+			price: req.body.price,
 		},
 		{
 			where: {
@@ -49,10 +55,10 @@ router.put('/packages/edit', (req, res) => {
 router.delete('/packages/:id', (req, res) => {
 	db.Package.destroy(
 		{
-			venue: req.body.venue,
-			artist: req.body.artist,
+			type: req.body.type,
+			duration: req.body.duration,
 			date: req.body.date,
-			packageinfo: req.body.packageinfo,
+			price: req.body.price,
 		},
 		{
 			where: {

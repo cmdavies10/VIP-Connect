@@ -1,10 +1,9 @@
-
 import React, { Component } from 'react';
 
 // import Validate from "./components/Validation";
 
 // import React from 'react';
-import './App.css';
+// import './App.css';
 import NavBar from './components/NavBar';
 
 import MainTitle from './components/LoginPage/MainTitle';
@@ -23,16 +22,14 @@ import PackageCard from './components/EventFormPage/PackageCard';
 import DescriptionCard from './components/DescriptionPage/DescriptionCard';
 
 export default class App extends Component {
+	// import React, { Component } from 'react';
 
-// import React, { Component } from 'react';
+	// import Validate from "./components/Validation";
 
-// import Validate from "./components/Validation";
-
-
-class App extends React.Component {
+	// class App extends React.Component {
 
 	state = {
-		data: null
+		data: null,
 	};
 
 	render() {
@@ -82,4 +79,3 @@ class App extends React.Component {
 // 		);
 // 	}
 //
-

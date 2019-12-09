@@ -1,28 +1,21 @@
 var express = require('express');
 var router = express.Router();
 // var path = require("path");
-var db = require('./../models/index.js');
+var db = require('../models');
+// var User = require('../models/User');
 
-router.get('/users', (req, res) => {
+//mounted on /users
+
+router.get('/', (req, res) => {
+	console.log(db.User);
 	db.User.findAll({}).then(function(dbUsers) {
 		res.json(dbUsers);
 	});
 });
 
-// router.get("/user/:id", (req, res) => {
-//   db.users.findAll({
-//     where:{
-//       id: req.params.id
-//     }
-//   })
-//   .then(function(dbUsers){
-//       res.json(dbUsers);
-//   });
-// });
-
-router.post('/users', (req, res) => {
+router.post('/', (req, res) => {
 	db.User.create({
-		name: req.body.name,
+		username: req.body.username,
 		password: req.body.password,
 	}).then(function(dbUsers) {
 		res.json(dbUsers);
@@ -39,8 +32,8 @@ router.post('/users', (req, res) => {
 //     res.send(`a post request with /user/post route on port ${PORT}`);
 // })
 
-router.put('/users/:id', (req, res) => {
-	db.Users.update(
+router.put('/:id', (req, res) => {
+	db.User.update(
 		{
 			username: req.body.username,
 			password: req.body.password,
@@ -55,8 +48,8 @@ router.put('/users/:id', (req, res) => {
 	});
 });
 
-router.delete('/users/:id', (req, res) => {
-	db.Users.destroy(
+router.delete('/:id', (req, res) => {
+	db.User.destroy(
 		{
 			username: req.body.username,
 			password: req.body.password,
