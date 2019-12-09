@@ -8,7 +8,7 @@ import Container from 'react-bootstrap/Container'
 
 export default function EventFormPage (){
     return (
-        <div class="container-background">
+        <div class="container-ground1">
     
     {/* <Container >  
     <Image src="https://media.giphy.com/media/kF0ngyP7S1DfmzKqiN/g" fluid />
