@@ -1,4 +1,3 @@
-<<<<<<< HEAD
 // Requiring our models and passport as we've configured it
 var db = require("../models");
 var passport = require("../config/passport");
@@ -15,12 +14,14 @@ module.exports = function(app) {
 	// how we configured our Sequelize User Model. If the user is created successfully, proceed to log the user in,
 	// otherwise send back an error
 	app.post("/api/signup", function(req, res) {
+		console.log("dumbmessage");
 		db.User.create({
-			email: req.body.email,
+			username: req.body.username,
 			password: req.body.password
 		})
-			.then(function() {
-				res.redirect(307, "/api/login");
+			.then(function(data) {
+				// res.redirect(307, "/api/login");
+				res.json(data);
 			})
 			.catch(function(err) {
 				res.status(401).json(err);
@@ -42,7 +43,7 @@ module.exports = function(app) {
 			// Otherwise send back the user's email and id
 			// Sending back a password, even a hashed password, isn't a good idea
 			res.json({
-				email: req.user.email,
+				username: req.user.username,
 				id: req.user.id
 			});
 		}
@@ -88,47 +89,6 @@ module.exports = function(app) {
 // 		});
 // 	});
 
-=======
-// // Requiring our models
-// // ===============================================================
-
-// // someDB to be changed
-// var db = require("../models");
-
-// // Routes
-// // =============================================================
-
-// module.exports = function(app) {
-// 	// GET route for getting all
-// 	app.get("/", function(req, res) {
-// 		db.VIP.findAll({}).then(function() {
-// 			res.json();
-// 		});
-// 	});
-
-// 	// POST route
-// 	app.post("/", function(req, res) {
-// 		db.VIP.create({
-// 			text: req.body.text,
-// 			complete: req.body.complete
-// 		}).then(function() {
-// 			res.json();
-// 		});
-// 	});
-
-// 	// DELETE route
-// 	app.delete("/", function(req, res) {
-// 		db.VIP.destroy({
-// 			where: {
-// 				id: req.params.id
-// 			}
-// 		}).then(function() {
-// 			// res.end();
-// 			res.json();
-// 		});
-// 	});
-
->>>>>>> master
 // 	// PUT route for updating
 // 	app.put("/", function(req, res) {
 // 		db.VIP.update(

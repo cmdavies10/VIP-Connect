@@ -72,6 +72,7 @@ class LogInPage extends Component {
 							>
 								Create
 							</Button>
+							<a href="/auth/google">Sign In with Google</a>
 						</Form>
 					</div>
 				</Container>
