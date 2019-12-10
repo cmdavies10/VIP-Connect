@@ -1,37 +1,37 @@
-const morgan = require('morgan');
-const bodyParser = require('body-parser');
-const path = require('path');
+const morgan = require("morgan");
+const bodyParser = require("body-parser");
+const path = require("path");
 // var db = require('./models');
 
-var express = require('express');
+var express = require("express");
 
 var app = express();
 
 // Middleware
-app.use(morgan('dev'));
+app.use(morgan("dev"));
 app.use(bodyParser.json());
 app.use(bodyParser.urlencoded({ extended: true }));
 
-app.use(express.static(path.join(__dirname, '../build')));
+app.use(express.static(path.join(__dirname, "../client/build")));
 
-app.get('/hello', function(req, res) {
-	res.send({ express: 'Hello World. Server is up b*tchez' });
+app.get("/hello", function(req, res) {
+	res.send({ express: "Hello World. Server is up b*tchez" });
 });
 
-app.use('/users', require('../routes/userRoutes'));
+app.use("/users", require("../routes/userRoutes"));
 
-app.use('/packages', require('../routes/packageRouter'));
+app.use("/packages", require("../routes/packageRouter"));
 
-app.use('/events', require('../routes/eventRouter'));
+app.use("/events", require("../routes/eventRouter"));
 
-app.use('/artists', require('../routes/artistRoutes'));
-
-// app.use('/users', require('../routes/userRoutes'));
+app.use("/artists", require("../routes/artistRoutes"));
 
 // app.use('/users', require('../routes/userRoutes'));
 
-app.get('*', (req, res) => {
-	res.sendFile(path.join(__dirname, '../build'), 'index.html');
+// app.use('/users', require('../routes/userRoutes'));
+
+app.get("*", (req, res) => {
+	res.sendFile(path.join(__dirname, "../client/build"), "index.html");
 	res.end();
 });
 
