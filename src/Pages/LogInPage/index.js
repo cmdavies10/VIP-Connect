@@ -1,28 +1,26 @@
-import React,{Component} from 'react'
-import './index.css'
+import React, { Component } from 'react';
+import './index.css';
 // import Jumbotron from 'react-bootstrap/Jumbotron'
-import Navbar from 'react-bootstrap/Navbar'
-import Form from 'react-bootstrap/Form'
-import Container from 'react-bootstrap/Container'
-import Button from 'react-bootstrap/Button'
-import Nav from 'react-bootstrap/Nav'
-import Col from 'react-bootstrap/Col'
+import Navbar from 'react-bootstrap/Navbar';
+import Form from 'react-bootstrap/Form';
+import Container from 'react-bootstrap/Container';
+import Button from 'react-bootstrap/Button';
+import Nav from 'react-bootstrap/Nav';
+import Col from 'react-bootstrap/Col';
+import { Link } from 'react-router-dom';
+
 // import NavBar from '../components/NavBar'
-import {Link} from 'react-router-dom'
 
-
-class LogInPage extends Component{
-     state= {
-       user : "",
-       password : ""
-     }
-     handleSubmit=(event)=>{
-      event.preventDefault() 
-      console.log("Hello");
-      console.log(event);
-     }
-
-
+class LogInPage extends Component {
+	state = {
+		user: '',
+		password: '',
+	};
+	handleSubmit = event => {
+		event.preventDefault();
+		console.log('Hello');
+		console.log(event);
+	};
 
 
    render(){
@@ -100,6 +98,7 @@ class LogInPage extends Component{
       
     )
   }
+
 }
 
-export default LogInPage
+export default LogInPage;

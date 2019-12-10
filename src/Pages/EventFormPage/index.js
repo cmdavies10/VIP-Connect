@@ -1,3 +1,4 @@
+
 import React from 'react'
 import './index.css'
 import Form from 'react-bootstrap/Form'
@@ -47,7 +48,5 @@ export default function EventFormPage (){
   </div>
         
     )
+
 }
-
-
-
