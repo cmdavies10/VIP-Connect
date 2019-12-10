@@ -1,42 +1,28 @@
-import React from 'react'
-import './NavBar.css'
-
+import React from "react";
+import "./NavBar.css";
 
 class NavBar extends React.Component {
-    constructor(props){
-        super(props)
-        this.state = {
-            message: 'NAVBAR will b here',
-            }
-        }
-    
+	constructor(props) {
+		super(props);
+		this.state = {
+			message: "NAVBAR will b here"
+		};
+	}
 
-    render(){
-        const message = this.state.message
-        
-        // const user = this.state.user
+	render() {
+		const message = this.state.message;
 
-        return (
-            <div>
-                <div className='responsive-navbar-nav'>{message}</div>
-                
-            </div>
-        )
-    }
+		// const user = this.state.user
+
+		return (
+			<div>
+				<div className="responsive-navbar-nav">{message}</div>
+			</div>
+		);
+	}
 }
 
-export default NavBar
-
-// //////////////////////////////////////////////////////
-
-
-
-
-
-
-
-
-
+export default NavBar;
 
 // import React from "react";
 
