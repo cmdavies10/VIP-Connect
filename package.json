@@ -2,7 +2,6 @@
 	"name": "vip-boss",
 	"version": "0.1.0",
 	"private": true,
-	"proxy": "http://localhost:3001/",
 	"dependencies": {
 		"body-parser": "^1.19.0",
 		"bootstrap": "^4.4.1",
