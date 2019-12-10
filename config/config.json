@@ -1,14 +1,8 @@
 {
 	"development": {
-<<<<<<< HEAD
 		"username": "cmdavies10",
 		"password": "cadaverDavey434%",
 		"database": "vip_db",
-=======
-		"username": "root",
-		"password": "Jpisme13.",
-		"database": "vip",
->>>>>>> master
 		"host": "127.0.0.1",
 		"dialect": "mysql",
 		"operatorsAliases": false
@@ -16,11 +10,7 @@
 	"test": {
 		"username": "root",
 		"password": "Jpisme13.",
-<<<<<<< HEAD
-		"database": "vip-test",
-=======
 		"database": "database_test",
->>>>>>> master
 		"host": "127.0.0.1",
 		"dialect": "mysql",
 		"operatorsAliases": false

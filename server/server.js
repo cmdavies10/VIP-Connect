@@ -1,4 +1,3 @@
-<<<<<<< HEAD
 require("dotenv").config();
 
 const morgan = require("morgan");
@@ -31,11 +30,6 @@ var express = require("express");
 // passport.serializeUser(function(user, cb) {
 // 	cb(null, user);
 // });
-=======
-const morgan = require('morgan');
-const bodyParser = require('body-parser');
-// var db = require('./models');
->>>>>>> master
 
 // passport.deserializeUser(function(obj, cb) {
 // 	cb(null, obj);
@@ -47,7 +41,6 @@ var app = express();
 app.use(morgan("dev"));
 app.use(bodyParser.json());
 app.use(bodyParser.urlencoded({ extended: true }));
-<<<<<<< HEAD
 // app.use(
 // 	require("express-session")({
 // 		secret: "keyboard cat",
@@ -65,22 +58,15 @@ app.use(express.static("public"));
 
 app.get("/hello", function(req, res) {
 	res.send({ express: "Hello World. Server is up b*tchez" });
-=======
-
-// app.use(express.static('public'));
-
-app.get('/hello', function(req, res) {
-	res.send({ express: 'Hello World. Server is up b*tchez' });
->>>>>>> master
 });
 
-app.use('/users', require('../routes/userRoutes'));
+app.use("/users", require("../routes/userRoutes"));
 
-app.use('/packages', require('../routes/packageRouter'));
+app.use("/packages", require("../routes/packageRouter"));
 
-app.use('/events', require('../routes/eventRouter'));
+app.use("/events", require("../routes/eventRouter"));
 
-app.use('/artists', require('../routes/artistRoutes'));
+app.use("/artists", require("../routes/artistRoutes"));
 
 // app.use('/users', require('../routes/userRoutes'));
 
