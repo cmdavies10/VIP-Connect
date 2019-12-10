@@ -22,7 +22,7 @@
 		"socket.io": "^2.3.0"
 	},
 	"scripts": {
-		"start": "react-scripts build && node server/index",
+		"start": "node server/index",
 		"start-dev": "react-scripts start & nodemon server/index",
 		"build": "react-scripts build",
 		"test": "react-scripts test",
