@@ -22,81 +22,83 @@ class LogInPage extends Component {
 		console.log(event);
 	};
 
-	render() {
-		return (
-			<div class="container-background" id="tinted-image">
-				{/* /* ------------------logo-------------------------- */}
-				<div class="logo-container">
-					<h6 class="grow">VIPFAN</h6>
-				</div>
 
-				<Container>
-					{/* /-------------log in form ------------------ */}
-					<div class="container-log-form">
-						<Form>
-							<Form.Row>
-								<Form.Group as={Col} controlId="formGridEmail">
-									<Form.Label class="label">Email</Form.Label>
-									<Form.Control type="email" placeholder="Enter email" class="form-control" />
-								</Form.Group>
-								<Form.Group as={Col} controlId="formGridPassword">
-									<Form.Label class="label">Password</Form.Label>
-									<Form.Control
-										type="password"
-										placeholder="Password"
-										class="form-control"
-										id="exampleInputPassword1"
-									/>
-								</Form.Group>
-							</Form.Row>
-							<Button
-								variant="primary"
-								type="submit"
-								onClick={() => this.handleSubmit()}
-								btn="rounded grow"
-							>
-								Submit
-							</Button>
+   render(){
+    return (
 
-							<Button variant="primary" type="submit" btn="rounded grow">
-								Create
-							</Button>
-						</Form>
-					</div>
-				</Container>
-				{/* ---------------- navbar botom---------------------*/}
-				{/* <Navbar sticky="bottom" /> */}
-				<Navbar collapseOnSelect expand="lg" variant="dark" sticky="bottom">
-					<Navbar.Toggle aria-controls="responsive-navbar-nav" />
-					<Navbar.Collapse id="responsive-navbar-nav">
-						<Nav className="mr-auto">
-							<Link className="btn" to="/loginpage">
-								Home
-							</Link>
-							{/* <Nav.Link href="#features">Home</Nav.Link> */}
-						</Nav>
-						<Nav>
-							<Link className="btn" to="/optionspage">
-								Options
-							</Link>
-							{/* <Nav.Link class="text" href="#pricing">
-							See Events
-						</Nav.Link> */}
-							<Link className="btn" to="/buypage">
-								Buy
-							</Link>
-							<Link className="btn" to="/eventformpage">
-								Create
-							</Link>
-							<Link className="btn" to="/ticketpage">
-								My Ticket
-							</Link>
-						</Nav>
-					</Navbar.Collapse>
-				</Navbar>
-			</div>
-		);
-	}
+    <div class="container-background" id="tinted-image">
+       {/* /* ------------------logo-------------------------- */ }
+       <div class="logo-container">
+       {/* <h6 class="grow">VIPFAN</h6> */}
+       <Link className='btn' to='/loginpage'><h6 class="grow">VIPFAN</h6></Link>
+    </div>
+
+          
+      <Container>    
+          {/* /-------------log in form ------------------ */}
+       <div class="container-log-form">
+          <Form>
+              <Form.Row>
+                <Form.Group as={Col} controlId="formGridEmail">
+                  <Form.Label class="label">User Name</Form.Label>
+                    <Form.Control type="email" placeholder="Enter user name" class="form-control" />
+                </Form.Group>
+                <Form.Group as={Col} controlId="formGridPassword">
+                  <Form.Label class="label">Password</Form.Label>
+                    <Form.Control type="password" placeholder="Password" class="form-control" id="exampleInputPassword1"/>
+                 </Form.Group>
+              </Form.Row>
+
+                {/* <Button variant="primary" type="submit" onClick={()=> this.handleSubmit()} btn="rounded grow">
+                  Submit
+                 </Button> */}
+
+
+                 {/* <Button variant="primary" type="submit" btn="rounded grow">
+                  Create
+                </Button> */}
+
+                 <Link className='btn' to='/optionspage'>Submit</Link>
+                 
+                 {/* <Button variant="primary" type="submit" btn="rounded grow">
+                  Create
+                </Button> */}
+          </Form>
+       </div>
+
+      </Container>
+        {/* ------------ navbarbotom---------------------*/}
+         
+<Navbar collapseOnSelect expand="lg" variant="light" fixed='top'>
+        <Navbar.Toggle aria-controls="responsive-navbar-nav" />
+            <Navbar.Collapse id="responsive-navbar-nav">
+              <Nav className="mr-auto">
+              <Link className='btn' to='/loginpage'>Home</Link>
+              {/* <Nav.Link href="#features">Home</Nav.Link> */}
+          </Nav>
+          <Nav>
+            <Link className='btn' to='/optionspage'>See Events</Link> 
+            {/* <Nav.Link class="text" href="#pricing">See Events</Nav.Link> */}
+
+              <Link className='btn' to='/buypage'>Buy</Link>
+              {/* <Nav.Link href="#features">Buy</Nav.Link> */}
+
+              <Link className='btn' to='/eventformpage'>Contact Us</Link>
+              
+              <Link className='btn' to='/eventformpage'>Create</Link>
+              {/* <Nav.Link href="#features">Create</Nav.Link> */}
+              
+              <Link className='btn' to='/ticketpage'>My Tickets</Link>
+              {/* <Nav.Link href="#pricing">My Tickets</Nav.Link> */}
+            </Nav>
+           </Navbar.Collapse>
+      </Navbar>                                            
+  </div>
+
+      
+    )
+  }
+
 }
 
 export default LogInPage;
