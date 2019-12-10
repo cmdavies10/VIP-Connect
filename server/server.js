@@ -12,7 +12,7 @@ app.use(morgan('dev'));
 app.use(bodyParser.json());
 app.use(bodyParser.urlencoded({ extended: true }));
 
-app.use(express.static(path.join(__dirname, '../build')));
+app.use('/static', express.static(path.join(__dirname, '../build')));
 
 app.get('/hello', function(req, res) {
 	res.send({ express: 'Hello World. Server is up b*tchez' });
