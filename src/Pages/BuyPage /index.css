@@ -1,5 +1,5 @@
 .container{
-   margin-top: 140px ;
+   margin-top: 0px ;
 }
 
   /* .label {
@@ -9,6 +9,27 @@
     padding: 0;
     line-height: 5em;
   } */
+
+  .title-container {
+    margin-top: 20px;
+    margin-bottom: 30px;
+    /* background: red; */
+    /* height: 100px; */
+    color: hsla(0, 0%, 0%, 0.9);
+    /* font: normal 80px Varela Round, sans-serif; */
+    /* height: 40px; */
+    left: 0;
+    /* letter-spacing: 5px; */
+    /* margin: 40px 0 0 0; */
+    position: relative;
+    text-align: center;
+    width: 100%;
+    /* z-index: 10; */
+    font-size: 1rem;
+    top: 12%;
+    align-items: center;
+    justify-content: center;
+  }
 
 
 

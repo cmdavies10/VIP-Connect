@@ -1,4 +1,4 @@
-.container-background {
+.container-ground1 {
     width: 100vw;
     height: 100vh;
     position: relative;
@@ -18,4 +18,11 @@
     background-size: cover;
     overflow: hidden;
     box-shadow: inset 50px 100px 600px black;
+  }
+
+  .container{
+    width: 100vw;
+    height: 70%;
+    position: relative;
+
   }
