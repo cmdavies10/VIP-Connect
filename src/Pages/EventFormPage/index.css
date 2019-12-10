@@ -19,3 +19,10 @@
     overflow: hidden;
     box-shadow: inset 50px 100px 600px black;
   }
+
+  .container{
+    width: 100vw;
+    height: 70%;
+    position: relative;
+
+  }

@@ -15,7 +15,8 @@ export default function BuyPage (){
   <div class="container-background-none" id="tinted-image">
       {/* /* ------------------logo-------------------------- */ }
       <div class="logo-container">
-       <h6 class="grow">VIPFAN</h6>
+       {/* <h6 class="grow">VIPFAN</h6> */}
+       <Link className='btn' to='/loginpage'><h6 class="grow">VIPFAN</h6></Link>
      </div>
 
  {/* /* ------------------page titles-------------------------- */ }
@@ -104,9 +105,11 @@ export default function BuyPage (){
 
 
 
-  <Button variant="primary" type="submit">
+  {/* <Button variant="primary" type="submit">
     Submit
-  </Button>
+  </Button> */}
+
+  <Link className='btn' to='/ticketpage'>Buy Tickets</Link>
 
 </Form>
 
@@ -114,7 +117,7 @@ export default function BuyPage (){
 
 {/* ------------ navbarbotom---------------------*/}
          
-<Navbar collapseOnSelect expand="lg"  variant="dark" sticky="bottom">
+<Navbar collapseOnSelect expand="lg" variant="light" fixed='top'>
         <Navbar.Toggle aria-controls="responsive-navbar-nav" />
             <Navbar.Collapse id="responsive-navbar-nav">
               <Nav className="mr-auto">
@@ -127,6 +130,8 @@ export default function BuyPage (){
 
               <Link className='btn' to='/buypage'>Buy</Link>
               {/* <Nav.Link href="#features">Buy</Nav.Link> */}
+
+              <Link className='btn' to='/eventformpage'>Contact Us</Link>
               
               <Link className='btn' to='/eventformpage'>Create</Link>
               {/* <Nav.Link href="#features">Create</Nav.Link> */}
@@ -135,8 +140,7 @@ export default function BuyPage (){
               {/* <Nav.Link href="#pricing">My Tickets</Nav.Link> */}
             </Nav>
            </Navbar.Collapse>
-      </Navbar>                
-
+      </Navbar>                     
 
 </div>
     )

@@ -14,7 +14,8 @@ export default function TicketPage (){
         <div class="container-background-none" id="tinted-image">
         {/* /* ------------------logo-------------------------- */ }
         <div class="logo-container">
-         <h6 class="grow">VIPFAN</h6>
+         {/* <h6 class="grow">VIPFAN</h6> */}
+         <Link className='btn' to='/loginpage'><h6 class="grow">VIPFAN</h6></Link>
        </div>
   
    {/* /* ------------------page titles-------------------------- */ }
@@ -68,7 +69,8 @@ export default function TicketPage (){
   </Card>
 </CardDeck>
 
-    <Button variant="primary">Go Home</Button>
+    {/* <Button variant="primary">Go Home</Button> */}
+    <Link className='btn' to='/optionspage'>Search</Link> 
   </Card.Body>
   
 </Card>
@@ -79,7 +81,7 @@ export default function TicketPage (){
 
 {/* ------------ navbarbotom---------------------*/}
          
-<Navbar collapseOnSelect expand="lg"  variant="dark" sticky="bottom">
+<Navbar collapseOnSelect expand="lg" variant="light" fixed='top'>
         <Navbar.Toggle aria-controls="responsive-navbar-nav" />
             <Navbar.Collapse id="responsive-navbar-nav">
               <Nav className="mr-auto">
@@ -92,6 +94,8 @@ export default function TicketPage (){
 
               <Link className='btn' to='/buypage'>Buy</Link>
               {/* <Nav.Link href="#features">Buy</Nav.Link> */}
+
+              <Link className='btn' to='/eventformpage'>Contact Us</Link>
               
               <Link className='btn' to='/eventformpage'>Create</Link>
               {/* <Nav.Link href="#features">Create</Nav.Link> */}
@@ -100,10 +104,8 @@ export default function TicketPage (){
               {/* <Nav.Link href="#pricing">My Tickets</Nav.Link> */}
             </Nav>
            </Navbar.Collapse>
-      </Navbar>                
-
-
-        </div>
+      </Navbar>                         
+  </div>
 
     )
 }

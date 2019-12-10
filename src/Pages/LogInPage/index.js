@@ -31,7 +31,8 @@ class LogInPage extends Component{
     <div class="container-background" id="tinted-image">
        {/* /* ------------------logo-------------------------- */ }
        <div class="logo-container">
-       <h6 class="grow">VIPFAN</h6>
+       {/* <h6 class="grow">VIPFAN</h6> */}
+       <Link className='btn' to='/loginpage'><h6 class="grow">VIPFAN</h6></Link>
     </div>
 
           
@@ -41,28 +42,36 @@ class LogInPage extends Component{
           <Form>
               <Form.Row>
                 <Form.Group as={Col} controlId="formGridEmail">
-                  <Form.Label class="label">Email</Form.Label>
-                    <Form.Control type="email" placeholder="Enter email" class="form-control" />
+                  <Form.Label class="label">User Name</Form.Label>
+                    <Form.Control type="email" placeholder="Enter user name" class="form-control" />
                 </Form.Group>
                 <Form.Group as={Col} controlId="formGridPassword">
                   <Form.Label class="label">Password</Form.Label>
                     <Form.Control type="password" placeholder="Password" class="form-control" id="exampleInputPassword1"/>
                  </Form.Group>
               </Form.Row>
-                <Button variant="primary" type="submit" onClick={()=> this.handleSubmit()} btn="rounded grow">
+
+                {/* <Button variant="primary" type="submit" onClick={()=> this.handleSubmit()} btn="rounded grow">
                   Submit
-                 </Button>
-                 
-                 <Button variant="primary" type="submit" btn="rounded grow">
+                 </Button> */}
+
+
+                 {/* <Button variant="primary" type="submit" btn="rounded grow">
                   Create
-                </Button>
+                </Button> */}
+
+                 <Link className='btn' to='/optionspage'>Submit</Link>
+                 
+                 {/* <Button variant="primary" type="submit" btn="rounded grow">
+                  Create
+                </Button> */}
           </Form>
        </div>
 
       </Container>
-         {/* ------------ navbarbotom---------------------*/}
+        {/* ------------ navbarbotom---------------------*/}
          
-      <Navbar collapseOnSelect expand="lg"  variant="dark" sticky="bottom">
+<Navbar collapseOnSelect expand="lg" variant="light" fixed='top'>
         <Navbar.Toggle aria-controls="responsive-navbar-nav" />
             <Navbar.Collapse id="responsive-navbar-nav">
               <Nav className="mr-auto">
@@ -75,6 +84,8 @@ class LogInPage extends Component{
 
               <Link className='btn' to='/buypage'>Buy</Link>
               {/* <Nav.Link href="#features">Buy</Nav.Link> */}
+
+              <Link className='btn' to='/eventformpage'>Contact Us</Link>
               
               <Link className='btn' to='/eventformpage'>Create</Link>
               {/* <Nav.Link href="#features">Create</Nav.Link> */}
@@ -83,10 +94,9 @@ class LogInPage extends Component{
               {/* <Nav.Link href="#pricing">My Tickets</Nav.Link> */}
             </Nav>
            </Navbar.Collapse>
-      </Navbar>                         
+      </Navbar>                                            
   </div>
-     
-     
+
       
     )
   }

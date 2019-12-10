@@ -82,24 +82,26 @@ h6 {
 /* } */
 
 /* -------------------------------form----------------------------------------- */
-
-.title-container {
+/* ???????????????????????????????????? */
+/* .title-container {
   height: 100px;
-  color: hsla(0, 0%, 0%, 0.9);
+  color: hsla(0, 0%, 0%, 0.9); */
   /* font: normal 80px Varela Round, sans-serif; */
   /* height: 40px; */
-  left: 0;
+  /* left: 0; */
   /* letter-spacing: 5px; */
-  margin: 70px 0 0 0;
+  /* margin: 70px 0 0 0;
   position: absolute;
   text-align: center;
-  width: 100%;
+  width: 100%; */
   /* z-index: 10; */
-  font-size: 1rem;
+  /* font-size: 1rem;
   top: 12%;
   align-items: center;
   justify-content: center;
-}
+} */
+/* ???????????????????????????????????? */
+
 
 h1 {
   line-height: 0.1em;
@@ -122,7 +124,7 @@ p {
   display: flex;
   flex-wrap: wrap;
   justify-content: space-between;
-  margin-top: 100px;
+  margin-top: 0px;
 }
 
 .card {
@@ -175,3 +177,4 @@ p {
   -moz-box-shadow: 0px 5px 40px -10px rgba(0, 0, 0, 0.57);
   transition: all 0.3s ease 0s;
 }
+

@@ -6,21 +6,24 @@ import Container from "react-bootstrap/Container";
 import Navbar from "react-bootstrap/Navbar";
 import Nav from "react-bootstrap/Nav";
 import Carousel from "react-bootstrap/Carousel";
-import {Link} from 'react-router-dom'
+import { Link } from "react-router-dom";
 
 export default function OptionsPage() {
   return (
     <div class="container-background-none" id="tinted-image">
       {/* /* ------------------logo-------------------------- */}
       <div class="logo-container">
-        <h6 class="grow">VIPFAN</h6>
+        {/* <h6 class="grow">VIPFAN</h6> */}
+        <Link className="btn" to="/loginpage">
+          <h6 class="grow">VIPFAN</h6>
+        </Link>
       </div>
 
       {/* /* ------------------page titles-------------------------- */}
       <Container>
         <div class="title-container">
           <p>Meet the Band!</p>
-          <h1>Metalica</h1>
+          <h1>Metallica</h1>
         </div>
 
         {/* --------------carousel-------------------------- */}
@@ -33,11 +36,9 @@ export default function OptionsPage() {
               alt="First slide"
             />
             <Carousel.Caption>
-              <h3>
-                Dinner with your favorite Band.{" "}
-              </h3>
+              <h3>Dinner with your favorite Band </h3>
               <p1>
-                Dates might change depending on the availability of the artist.
+                Dates might change depending on the availability of the artist
               </p1>
             </Carousel.Caption>
           </Carousel.Item>
@@ -49,10 +50,10 @@ export default function OptionsPage() {
             />
 
             <Carousel.Caption>
-              <h3>
-                Meet the Band at back stage.{" "}
-              </h3>
-              <p1>Photo opportunities have to be limited.</p1>
+              <h3>Meet the Band at back stage </h3>
+              <p1>
+                Photo opportunities have to be limited to respect Star's privacy
+              </p1>
             </Carousel.Caption>
           </Carousel.Item>
           <Carousel.Item>
@@ -62,9 +63,10 @@ export default function OptionsPage() {
             />
 
             <Carousel.Caption>
-              <h3>All Within My Hands </h3>
+              <h3>"All Within My Hands" foundation will receive 10%</h3>
               <p1>
-                Metalica gives back to the community.{" "}
+                Your purchase / donation will benefit METALLICA's favorite
+                charity{" "}
               </p1>
             </Carousel.Caption>
           </Carousel.Item>
@@ -75,55 +77,64 @@ export default function OptionsPage() {
         <div class="big-card-container">
           <Card-big class="card-big">
             <Card.Header>
-
               <Nav variant="pills" defaultActiveKey="#first">
-
-               <Nav.Item>
-                  <Nav.Link href="#link">Home</Nav.Link>
+                <Nav.Item>
+                  {/* <Nav.Link href="#link">Home</Nav.Link> */}
+                  <Link className="btn" to="/loginpage">
+                    Home
+                  </Link>
                 </Nav.Item>
 
                 <Nav.Item>
-                  <Nav.Link href="#link">Charity</Nav.Link>
-                </Nav.Item>
+                  <Nav.Link className='btn' href="https://www.allwithinmyhands.org/welcome.html" target="_blank">Charity</Nav.Link>
+                  {/* ---------HOT TO CREATE A LINK TO ANOTHE WEB PAGE - not working----------- */}
+                  {/* <Link className='btn' to='https://www.allwithinmyhands.org/who-we-support/previous-recipients/'>Charity</Link>  */}
 
-                
+                  {/* ---------HOT TO CREATE A LINK TO ANOTHE WEB PAG not working----------- */}
+
+                  {/* function ActionLink() {
+  function handleClick(e) {
+    e.preventDefault();
+    console.log('The link was clicked.');
+  }
+
+  return (
+    <a href="https://www.allwithinmyhands.org/who-we-support/previous-recipients/" onClick={handleClick}>
+      Click me
+    </a>
+  );
+} */}
+                  {/* ---------HOT TO CREATE A LINK TO ANOTHE WEB PAGE----------- */}
+                </Nav.Item>
               </Nav>
             </Card.Header>
             <Card.Body>
-              <Card.Title>Metalica 2020 Tour</Card.Title>
-                       <p>Live : 10/29/2020</p>
-                       <p>Location: New York</p>
-                       <p>Your Bid: Dinner after Concert with one of the stars</p>
-                       <h2>Make you best offer!</h2>
+              <Card.Title>Metallica 2020 Tour</Card.Title>
+              <p>Live : 10/29/2020</p>
+              <p>Location: New York</p>
+              <p>Your Bid: Dinner after Concert with one of the stars</p>
+              <h2>Make you best offer!</h2>
               <Card.Text>
-               All exclusive experience a dinner with your favorite Band at the
+                All exclusive experience a dinner with your favorite Band at the
                 most elegant private dining rooms in Mayfair awarded a Michelin
-                star. Proceeds will got to All Within My Hands to assist the lives of members of
-                the communities who have supported the band for years.
+                star. Proceeds will got to All Within My Hands to assist the
+                lives of members of the communities who have supported the band
+                for years.
               </Card.Text>
-              <Button variant="primary">Buy Ticket</Button>
+              {/* <Button variant="primary">Buy Ticket</Button> */}
+              <Link className="btn" to="/buypage">
+                Buy Ticket
+              </Link>
             </Card.Body>
           </Card-big>
 
-          {/* //////////////////////cards///////////////////////// */}
-
-          {/* //////////////////////cards///////////////////////// */}
-
-          {/* //////////////////////cards///////////////////////// */}
-
-          {/* //////////////////////cards///////////////////////// */}
-
-          {/* //////////////////////cards///////////////////////// */}
-
-          {/* //////////////////////cards///////////////////////// */}
-
-          {/* //////////////////////cards///////////////////////// */}
+    
         </div>
       </Container>
 
       {/* ------------ navbarbotom---------------------*/}
          
-      <Navbar collapseOnSelect expand="lg"  variant="dark" sticky="bottom">
+<Navbar collapseOnSelect expand="lg" variant="light" fixed='top'>
         <Navbar.Toggle aria-controls="responsive-navbar-nav" />
             <Navbar.Collapse id="responsive-navbar-nav">
               <Nav className="mr-auto">
@@ -136,6 +147,8 @@ export default function OptionsPage() {
 
               <Link className='btn' to='/buypage'>Buy</Link>
               {/* <Nav.Link href="#features">Buy</Nav.Link> */}
+
+              <Link className='btn' to='/eventformpage'>Contact Us</Link>
               
               <Link className='btn' to='/eventformpage'>Create</Link>
               {/* <Nav.Link href="#features">Create</Nav.Link> */}
@@ -144,9 +157,7 @@ export default function OptionsPage() {
               {/* <Nav.Link href="#pricing">My Tickets</Nav.Link> */}
             </Nav>
            </Navbar.Collapse>
-      </Navbar>                
+      </Navbar>                     
     </div>
   );
 }
-
-
