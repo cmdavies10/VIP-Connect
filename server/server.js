@@ -30,10 +30,10 @@ app.use('/artists', require('../routes/artistRoutes'));
 
 // app.use('/users', require('../routes/userRoutes'));
 
-app.get('*', (req, res) => {
-	res.sendFile(path.join(__dirname, '../build'), 'index.html');
-	res.end();
-});
+// app.get('*', (req, res) => {
+// 	res.sendFile(path.join(__dirname, '../build'), 'index.html');
+// 	res.end();
+// });
 
 module.exports = app;
 
