@@ -4,36 +4,36 @@ const morgan = require("morgan");
 const bodyParser = require("body-parser");
 
 var express = require("express");
-var passport = require("passport");
-var GoogleStrategy = require("passport-google-oauth").OAuth2Strategy;
+// var passport = require("passport");
+// var GoogleStrategy = require("passport-google-oauth").OAuth2Strategy;
 
 // Use the GoogleStrategy within Passport.
 //   Strategies in Passport require a `verify` function, which accept
 //   credentials (in this case, an accessToken, refreshToken, and Google
 //   profile), and invoke a callback wiksth a user object.
-passport.use(
-	new GoogleStrategy(
-		{
-			clientID: process.env["GOOGLE_CLIENT_ID"],
-			clientSecret: process.env["GOOGLE_CLIENT_SECRET"],
-			callbackURL: "http://www.example.com/auth/google/callback"
-		},
-		function(accessToken, refreshToken, profile, done) {
-			User.findOrCreate({ googleId: profile.id }, function(err, user) {
-				return done(err, user);
-			});
-		}
-	)
-);
+// passport.use(
+// 	new GoogleStrategy(
+// 		{
+// 			clientID: process.env["GOOGLE_CLIENT_ID"],
+// 			clientSecret: process.env["GOOGLE_CLIENT_SECRET"],
+// 			callbackURL: "http://www.example.com/auth/google/callback"
+// 		},
+// 		function(accessToken, refreshToken, profile, done) {
+// 			User.findOrCreate({ googleId: profile.id }, function(err, user) {
+// 				return done(err, user);
+// 			});
+// 		}
+// 	)
+// );
 
-// Configure Passport authenticated session persistence.
-passport.serializeUser(function(user, cb) {
-	cb(null, user);
-});
+// // Configure Passport authenticated session persistence.
+// passport.serializeUser(function(user, cb) {
+// 	cb(null, user);
+// });
 
-passport.deserializeUser(function(obj, cb) {
-	cb(null, obj);
-});
+// passport.deserializeUser(function(obj, cb) {
+// 	cb(null, obj);
+// });
 
 var app = express();
 
@@ -41,18 +41,18 @@ var app = express();
 app.use(morgan("dev"));
 app.use(bodyParser.json());
 app.use(bodyParser.urlencoded({ extended: true }));
-app.use(
-	require("express-session")({
-		secret: "keyboard cat",
-		resave: true,
-		saveUninitialized: true
-	})
-);
+// app.use(
+// 	require("express-session")({
+// 		secret: "keyboard cat",
+// 		resave: true,
+// 		saveUninitialized: true
+// 	})
+// );
 
 // Initialize Passport and restore authentication state, if any, from the
 // session.
-app.use(passport.initialize());
-app.use(passport.session());
+// app.use(passport.initialize());
+// app.use(passport.session());
 
 app.use(express.static("public"));
 
