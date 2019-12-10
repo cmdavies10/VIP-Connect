@@ -1,5 +1,6 @@
 const morgan = require('morgan');
 const bodyParser = require('body-parser');
+const path = require('path');
 // var db = require('./models');
 
 var express = require('express');
@@ -11,7 +12,7 @@ app.use(morgan('dev'));
 app.use(bodyParser.json());
 app.use(bodyParser.urlencoded({ extended: true }));
 
-app.use(express.static('../build'));
+app.use(express.static(path.join(__dirname, '../build')));
 
 app.get('/hello', function(req, res) {
 	res.send({ express: 'Hello World. Server is up b*tchez' });
@@ -28,6 +29,11 @@ app.use('/artists', require('../routes/artistRoutes'));
 // app.use('/users', require('../routes/userRoutes'));
 
 // app.use('/users', require('../routes/userRoutes'));
+
+app.get('*', (req, res) => {
+	res.sendFile(path.join(__dirname, '../build'), 'index.html');
+	res.end();
+});
 
 module.exports = app;
 
