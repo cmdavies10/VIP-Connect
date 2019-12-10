@@ -14,7 +14,7 @@ export default function OptionsPage() {
       <div class="logo-container">
         {/* <h6 class="grow">VIPFAN</h6> */}
         <Link className="btn" to="/loginpage">
-          <h6 class="grow">VIPFAN</h6>
+          <h6 class="grow">VIP FAN</h6>
         </Link>
       </div>
 

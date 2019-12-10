@@ -11,11 +11,11 @@ import {Link} from 'react-router-dom'
 export default function TicketPage (){
     return (
 
-        <div class="container-background-none" id="tinted-image">
+  <div class="container-background-none" id="tinted-image">
         {/* /* ------------------logo-------------------------- */ }
         <div class="logo-container">
          {/* <h6 class="grow">VIPFAN</h6> */}
-         <Link className='btn' to='/loginpage'><h6 class="grow">VIPFAN</h6></Link>
+         <Link className='btn' to='/loginpage'><h6 class="grow">VIP FAN</h6></Link>
        </div>
   
    {/* /* ------------------page titles-------------------------- */ }
