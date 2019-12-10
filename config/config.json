@@ -10,7 +10,7 @@
 	"test": {
 		"username": "root",
 		"password": "Jpisme13.",
-		"database": "database_test",
+		"database": "vip",
 		"host": "127.0.0.1",
 		"dialect": "mysql",
 		"operatorsAliases": false
@@ -18,7 +18,7 @@
 	"production": {
 		"username": "root",
 		"password": "Jpisme13.",
-		"database": "database_production",
+		"database": "vip",
 		"host": "127.0.0.1",
 		"dialect": "mysql",
 		"operatorsAliases": false
