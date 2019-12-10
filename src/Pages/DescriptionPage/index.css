@@ -12,6 +12,7 @@
     filter: alpha(opacity=90); */
   }
   
+  
   @import url(https://fonts.googleapis.com/css?family=Varela+Round);
   
   h6 {
@@ -115,27 +116,27 @@
     
   
   }
-  
-  .title-container {
-    margin-top: 50px;
+/* ?????????????????????????????????????? */
+  /* .title-container {
+    margin-top: 50px; */
     /* background: red; */
-    height: 400px;
-    color: hsla(0, 0%, 0%, 0.9);
+    /* height: 400px;
+    color: hsla(0, 0%, 0%, 0.9); */
     /* font: normal 80px Varela Round, sans-serif; */
     /* height: 40px; */
-    left: 0;
+    /* left: 0; */
     /* letter-spacing: 5px; */
-    margin: 40px 0 0 0;
+    /* margin: 40px 0 0 0;
     position: absolute;
     text-align: center;
-    width: 100%;
-    z-index: 10;
-    font-size: 1rem;
+    width: 100%; */
+    /* z-index: 10; */
+    /* font-size: 1rem;
     top: 12%;
     align-items: center;
     justify-content: center;
-  }
-  
+  } */
+  /* ?????????????????????????????????????? */
   h1{
     line-height: 0.1em; 
     color: blue;
@@ -168,27 +169,35 @@
   padding-left: 10px; */
   margin-right: auto;
   margin-left: auto;
-  margin-top: 100px;
+  margin-top:  0px;
   }
 
   h3{
-    line-height: 1em; 
-    letter-spacing: 0.1em;
-    color: #ffffff;
-    font-weight: 310;
+    line-height: 1.0em; 
+    letter-spacing: 0.02em;
+    color:#202020;;
+    font-weight: 200;
     font-family: -apple-system,BlinkMacSystemFont,"Segoe UI",Roboto,"Helvetica Neue",Arial,"Noto Sans",sans-serif,"Apple Color Emoji","Segoe UI Emoji","Segoe UI Symbol","Noto Color Emoji";
   }
 
   p1{
-    line-height: 0.08em; 
+    line-height: 0.02em; 
     text-transform: uppercase; 
-    font-weight: 300;
-    color:  #ffffff;
+    font-weight: 200;
+    color:#202020;;
     letter-spacing: 0.1em;
     font-family: -apple-system,BlinkMacSystemFont,"Segoe UI",Roboto,"Helvetica Neue",Arial,"Noto Sans",sans-serif,"Apple Color Emoji","Segoe UI Emoji","Segoe UI Symbol","Noto Color Emoji";
   
     }
 
+    .carousel-caption{
+      position: static;
+    }
+
+    li{
+      margin-top: 20px;
+      color: red;
+    }
   /* ----------------big card------------------------ */
   .big-card-container{
     display: flex;
@@ -261,7 +270,7 @@
     border-radius: 6px;
     /* display: inline-block; */
     transition: all 0.3s ease 0s;
-    z-index: 10;
+    /* z-index: 10; */
     border-spacing: 15px;
     margin: 5px;
     }
@@ -276,7 +285,7 @@
       border-radius: 6px;
       /* display: inline-block; */
       transition: all 0.3s ease 0s;
-      z-index: 10;
+      /* z-index: 10; */
       border-spacing: 15px;
       margin: 5px;
     }
@@ -290,3 +299,40 @@
       -moz-box-shadow: 0px 5px 40px -10px rgba(0,0,0,0.57);
       transition: all 0.3s ease 0s;
       }
+
+      /* Portrait and Landscape */
+
+/* @media only screen 
+and (min-device-width: 375px) 
+and (max-device-width: 812px) 
+and (-webkit-min-device-pixel-ratio: 3) { */
+
+  /* .title-container:p{
+    font-size: 0.5em;
+  }
+  .title-container:h1{
+    font-size: 0.5em;
+  }
+  #tinted-image{
+    overflow: hidden;
+  } */
+ 
+/* } */
+
+
+/* @media only screen 
+  and (min-device-width: 375px) 
+  and (max-device-width: 812px) 
+  and (-webkit-min-device-pixel-ratio: 3)
+  and (orientation: landscape) { 
+    #tinted-image{
+      width: 100%;
+      
+    }
+
+} */
+
+
+/* .container{
+  margin-top: 0;
+} */
