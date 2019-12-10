@@ -1,26 +1,29 @@
-import React from 'react';
-import logo from './logo.svg';
-import './App.css';
+// import React from "react";
+import React, { Component } from 'react';
+import { BrowserRouter as Router, Route, Link, Switch } from 'react-router-dom';
+import 'bootstrap/dist/css/bootstrap.min.css';
+import LogInPage from './Pages/LogInPage';
+import OptionsPage from './Pages/OptionsPage';
+import DescriptionPage from './Pages/DescriptionPage';
+import BuyPage from './Pages/BuyPage';
+import TicketPage from './Pages/TicketPage';
+import MyConcertsPage from './Pages/MyConcertsPage';
+import EventFormPage from './Pages/EventFormPage';
 
 function App() {
-  return (
-    <div className="App">
-      <header className="App-header">
-        <img src={logo} className="App-logo" alt="logo" />
-        <p>
-          Edit <code>src/App.js</code> and save to reload.
-        </p>
-        <a
-          className="App-link"
-          href="https://reactjs.org"
-          target="_blank"
-          rel="noopener noreferrer"
-        >
-          Learn React
-        </a>
-      </header>
-    </div>
-  );
+	return (
+		<Router>
+			<Switch>
+				<Route exact path="/loginpage" component={LogInPage} />
+				<Route exact path="/optionspage" component={OptionsPage} />
+				<Route exact path="/descriptionpage" component={DescriptionPage} />
+				<Route exact path="/buypage" component={BuyPage} />
+				<Route exact path="/ticketpage" component={TicketPage} />
+				<Route exact path="/myconcertspage" component={MyConcertsPage} />
+				<Route exact path="/eventformpage" component={EventFormPage} />
+			</Switch>
+		</Router>
+	);
 }
 
 export default App;
