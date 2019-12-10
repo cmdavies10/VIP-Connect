@@ -5,7 +5,7 @@ import 'bootstrap/dist/css/bootstrap.min.css';
 import LogInPage from './Pages/LogInPage';
 import OptionsPage from './Pages/OptionsPage';
 import DescriptionPage from './Pages/DescriptionPage';
-import BuyPage from './Pages/BuyPage ';
+import BuyPage from './Pages/BuyPage';
 import TicketPage from './Pages/TicketPage';
 import MyConcertsPage from './Pages/MyConcertsPage';
 import EventFormPage from './Pages/EventFormPage';
