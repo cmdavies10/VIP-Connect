@@ -11,7 +11,7 @@ app.use(morgan('dev'));
 app.use(bodyParser.json());
 app.use(bodyParser.urlencoded({ extended: true }));
 
-// app.use(express.static('public'));
+app.use(express.static('client/build'));
 
 app.get('/hello', function(req, res) {
 	res.send({ express: 'Hello World. Server is up b*tchez' });
