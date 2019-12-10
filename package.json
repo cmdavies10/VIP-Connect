@@ -19,7 +19,7 @@
 		"sequelize": "^5.21.2"
 	},
 	"scripts": {
-		"start": "nodemon server/index",
+		"start": "node server/index",
 		"start-dev": "nodemon server/index & npm run start-react",
 		"start-react": "cd client && npm run start",
 		"heroku-postbuild": "cd client && npm run build"
