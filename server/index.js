@@ -1,9 +1,10 @@
-const db = require('./db');
+const db = require('../models');
 const app = require('./server');
-const port = process.env.PORT || 3000;
+const port = process.env.PORT || 3001;
 
-db.sync()
-	.then(console.log('database is synced'))
+db.sequelize
+	.sync()
+	// .then(console.log('database is synced'))
 
 	.then(function() {
 		app.listen(port);
