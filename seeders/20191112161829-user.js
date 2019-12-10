@@ -4,15 +4,17 @@ module.exports = {
 			'Users',
 			[
 				{
-					userName: 'Fakeguy',
+					username: 'Fakeguy',
 					password: 'password',
 				},
 				{
-					userName: 'Notrealguy',
+					username: 'Notrealguy',
 					password: 'password',
 				},
-			],
-			{}
+
+				// { googleId: 'example' },
+			]
+			// {}
 		);
 	},
 

@@ -1,6 +1,7 @@
 // const Sequelize = require('sequelize');
 // const db = require('../server/db/index');
 
+<<<<<<< HEAD
 // module.exports = function(sequelize, DataTypes) {
 // 	var User = sequelize.define("User", {
 // 		username: DataTypes.STRING,
@@ -42,6 +43,12 @@ module.exports = function(sequelize, DataTypes) {
 			bcrypt.genSaltSync(10),
 			null
 		);
+=======
+module.exports = function(sequelize, DataTypes) {
+	var User = sequelize.define('User', {
+		username: DataTypes.STRING,
+		password: DataTypes.STRING,
+>>>>>>> master
 	});
 	return User;
 };
@@ -94,6 +101,7 @@ module.exports = function(sequelize, DataTypes) {
 // });
 
 // module.exports = User;
+<<<<<<< HEAD
 
 // ==============================================
 
@@ -132,3 +140,5 @@ module.exports = function(sequelize, DataTypes) {
 // 	});
 // 	return User;
 // };
+=======
+>>>>>>> master

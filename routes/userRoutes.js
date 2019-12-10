@@ -1,3 +1,4 @@
+<<<<<<< HEAD
 var express = require("express");
 var router = express.Router();
 // var passport = require("passport");
@@ -22,16 +23,34 @@ var db = require("../models");
 // );
 
 router.get("/", (req, res) => {
+=======
+var express = require('express');
+var router = express.Router();
+// var path = require("path");
+var db = require('../models');
+// var User = require('../models/User');
+
+//mounted on /users
+
+router.get('/', (req, res) => {
+>>>>>>> master
 	console.log(db.User);
 	db.User.findAll({}).then(function(dbUsers) {
 		res.json(dbUsers);
 	});
 });
 
+<<<<<<< HEAD
 router.post("/", (req, res) => {
 	db.User.create({
 		username: req.body.username,
 		password: req.body.password
+=======
+router.post('/', (req, res) => {
+	db.User.create({
+		username: req.body.username,
+		password: req.body.password,
+>>>>>>> master
 	}).then(function(dbUsers) {
 		res.json(dbUsers);
 	});
@@ -47,6 +66,7 @@ router.post("/", (req, res) => {
 //     res.send(`a post request with /user/post route on port ${PORT}`);
 // })
 
+<<<<<<< HEAD
 router.put("/:id", (req, res) => {
 	db.User.update(
 		{
@@ -57,12 +77,25 @@ router.put("/:id", (req, res) => {
 			where: {
 				id: req.params.id
 			}
+=======
+router.put('/:id', (req, res) => {
+	db.User.update(
+		{
+			username: req.body.username,
+			password: req.body.password,
+		},
+		{
+			where: {
+				id: req.params.id,
+			},
+>>>>>>> master
 		}
 	).then(function(dbUsers) {
 		res.json(dbUsers);
 	});
 });
 
+<<<<<<< HEAD
 router.delete("/:id", (req, res) => {
 	db.User.destroy(
 		{
@@ -73,6 +106,18 @@ router.delete("/:id", (req, res) => {
 			where: {
 				id: req.params.id
 			}
+=======
+router.delete('/:id', (req, res) => {
+	db.User.destroy(
+		{
+			username: req.body.username,
+			password: req.body.password,
+		},
+		{
+			where: {
+				id: req.params.id,
+			},
+>>>>>>> master
 		}
 	).then(function(dbUsers) {
 		res.json(dbUsers);
