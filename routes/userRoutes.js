@@ -4,7 +4,7 @@ var router = express.Router();
 var db = require("../models");
 // var User = require('../models/User');
 
-//mounted on /users
+// mounted on /users
 
 router.get("/", (req, res) => {
 	console.log(db.User);
@@ -21,16 +21,6 @@ router.post("/", (req, res) => {
 		res.json(dbUsers);
 	});
 });
-
-// router.post("/api/user", (req, res) => {
-//   db.User.read({
-
-//   }).then(function(dbUser){
-//         res.json(dbUser);
-//     });
-
-//     res.send(`a post request with /user/post route on port ${PORT}`);
-// })
 
 router.put("/:id", (req, res) => {
 	db.User.update(

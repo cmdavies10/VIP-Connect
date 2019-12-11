@@ -12,10 +12,10 @@ export default function OptionsPage() {
 	return (
 		<div class="container-background-none" id="tinted-image">
 			{/* /* ------------------logo-------------------------- */}
-			<div class="logo-container">
+			<div className="logo-container">
 				{/* <h6 class="grow">VIPFAN</h6> */}
 				<Link className="btn" to="/loginpage">
-					<h6 class="grow">VIP FAN</h6>
+					<h6 className="grow">VIP FAN</h6>
 				</Link>
 			</div>
 
@@ -80,8 +80,8 @@ export default function OptionsPage() {
 
 				{/* --------------------cards------------------------- */}
 
-				<div class="big-card-container">
-					<Card-big class="card-big">
+				<div className="big-card-container">
+					<Card-big className="card-big">
 						<Card.Header>
 							<Nav variant="pills" defaultActiveKey="#first">
 								<Nav.Item>
@@ -168,13 +168,13 @@ export default function OptionsPage() {
 						</Link>
 						{/* <Nav.Link href="#features">Buy</Nav.Link> */}
 
-						<Link className="btn" to="/eventformpage">
+						{/* <Link className="btn" to="/eventformpage">
 							Contact Us
 						</Link>
 
 						<Link className="btn" to="/eventformpage">
 							Create
-						</Link>
+						</Link> */}
 						{/* <Nav.Link href="#features">Create</Nav.Link> */}
 
 						<Link className="btn" to="/ticketpage">
