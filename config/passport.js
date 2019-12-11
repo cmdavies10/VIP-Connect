@@ -1,5 +1,9 @@
+require("dotenv").config();
 var passport = require("passport"),
 	LocalStrategy = require("passport-local").Strategy;
+
+// var passport = require("passport");
+var GoogleStrategy = require("passport-google-oauth").OAuth2Strategy;
 
 var db = require("../models");
 
@@ -28,6 +32,25 @@ passport.use(
 			return done(null, dbUser);
 		});
 	})
+);
+
+passport.use(
+	new GoogleStrategy(
+		{
+			clientID: process.env.GOOGLE_CLIENT_ID,
+			clientSecret: process.env.GOOGLE_CLIENT_SECRET,
+			callbackURL: "https://vip-fan.herokuapp.com/optionspage"
+		},
+		function(accessToken, refreshToken, profile, done) {
+			db.User.findOrCreate({
+				where: {
+					googleId: profile.id
+				}
+			}).then(function(err, user) {
+				return done(err, user);
+			});
+		}
+	)
 );
 
 // In order to help keep authentication state across HTTP requests,
