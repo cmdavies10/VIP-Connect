@@ -15,7 +15,8 @@ module.exports = function(sequelize, DataTypes) {
 		password: {
 			type: DataTypes.STRING,
 			allowNull: false
-		}
+		},
+		googleID: DataTypes.STRING
 	});
 	return User;
 };
