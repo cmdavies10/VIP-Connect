@@ -2,6 +2,8 @@ import React, { Component } from "react";
 import "./index.css";
 // import Jumbotron from 'react-bootstrap/Jumbotron'
 import Navbar from "react-bootstrap/Navbar";
+// import axios from "axios";
+import API from "../../utils/API";
 import Form from "react-bootstrap/Form";
 import Container from "react-bootstrap/Container";
 import Button from "react-bootstrap/Button";
@@ -18,9 +20,12 @@ class LogInPage extends Component {
 	};
 
 	handleInputChange = event => {
-		// Getting the value and name of the input which triggered the change
-		const { name, value } = event.target;
+		let value = event.target.value;
+		const name = event.target.name;
 
+		if (name === "password") {
+			value = value.substring(0, 15);
+		}
 		// Updating the input's state
 		this.setState({
 			[name]: value
@@ -29,19 +34,29 @@ class LogInPage extends Component {
 
 	handleBtnClick = event => {
 		event.preventDefault();
-		alert(`Hello ${this.state.username} ${this.state.password}`);
+
+		if (!this.state.username || !this.state.password) {
+			alert("Error - Please fill out username and password");
+		} else if (this.state.password.length < 6) {
+			alert(
+				`Choose a more secure password ${this.state.username} ${this.state.password}`
+			);
+		} else {
+			API.loginUser({
+				username: this.state.username,
+				password: this.state.password
+			})
+				.then(res => console.log(res))
+				.catch(err => console.log(err));
+
+			alert(`Hello ${this.state.username} ${this.state.password}`);
+		}
+
 		this.setState({
 			username: "",
 			password: ""
 		});
 	};
-
-	// handleSubmit = event => {
-	// 	event.preventDefault();
-	// 	alert("this is working");
-	// 	console.log("Hello");
-	// 	console.log(event);
-	// };
 
 	render() {
 		return (
