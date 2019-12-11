@@ -13,21 +13,35 @@ import { Link } from "react-router-dom";
 
 class LogInPage extends Component {
 	state = {
-		user: "",
+		username: "",
 		password: ""
+	};
+
+	handleInputChange = event => {
+		// Getting the value and name of the input which triggered the change
+		const { name, value } = event.target;
+
+		// Updating the input's state
+		this.setState({
+			[name]: value
+		});
 	};
 
 	handleBtnClick = event => {
 		event.preventDefault();
-		alert("test");
+		alert(`Hello ${this.state.username} ${this.state.password}`);
+		this.setState({
+			username: "",
+			password: ""
+		});
 	};
 
-	handleSubmit = event => {
-		event.preventDefault();
-		alert("this is working");
-		console.log("Hello");
-		console.log(event);
-	};
+	// handleSubmit = event => {
+	// 	event.preventDefault();
+	// 	alert("this is working");
+	// 	console.log("Hello");
+	// 	console.log(event);
+	// };
 
 	render() {
 		return (
@@ -50,7 +64,10 @@ class LogInPage extends Component {
 										Username
 									</Form.Label>
 									<Form.Control
-										type="email"
+										type="text"
+										name="username"
+										value={this.state.username}
+										onChange={this.handleInputChange}
 										placeholder="Enter username"
 										className="form-control"
 									/>
@@ -63,10 +80,13 @@ class LogInPage extends Component {
 										Password
 									</Form.Label>
 									<Form.Control
-										type="password"
+										type="text"
+										name="password"
+										value={this.state.password}
+										onChange={this.handleInputChange}
 										placeholder="Password"
 										className="form-control"
-										id="exampleInputPassword1"
+										// id="exampleInputPassword1"
 									/>
 								</Form.Group>
 							</Form.Row>
