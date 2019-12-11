@@ -16,7 +16,7 @@ module.exports = function(sequelize, DataTypes) {
 			type: DataTypes.STRING,
 			allowNull: false
 		},
-		googleID: DataTypes.STRING
+		googleId: DataTypes.STRING
 	});
 	return User;
 };
