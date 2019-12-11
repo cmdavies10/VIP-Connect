@@ -37,10 +37,6 @@ app.use("/users", require("../routes/userRoutes"));
 
 // app.use("/artists", require("../routes/artistRoutes"));
 
-// app.use('/users', require('../routes/userRoutes'));
-
-// app.use('/users', require('../routes/userRoutes'));
-
 app.get("*", (req, res) => {
 	res.sendFile(path.join(__dirname, "../client/build"), "index.html");
 	res.end();

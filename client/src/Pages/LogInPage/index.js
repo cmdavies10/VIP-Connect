@@ -5,7 +5,6 @@ import Navbar from "react-bootstrap/Navbar";
 // import axios from "axios";
 import API from "../../utils/API";
 import { Redirect } from "react-router-dom";
-// import { useHistory } from "react-router-dom";
 import Form from "react-bootstrap/Form";
 import Container from "react-bootstrap/Container";
 import Button from "react-bootstrap/Button";
@@ -48,15 +47,17 @@ class LogInPage extends Component {
 				username: this.state.username,
 				password: this.state.password
 			})
-				// .then(res => console.log(res))
 				.then(res => {
 					this.setState({
 						login: true
 					});
 				})
-				.catch(err => console.log(err));
-
-			alert(`Hello ${this.state.username}`);
+				.catch(err => {
+					console.log(err);
+					alert(
+						`User not found. Please check login credentials or create new user.`
+					);
+				});
 		}
 
 		this.setState({
@@ -71,7 +72,7 @@ class LogInPage extends Component {
 		if (!this.state.username || !this.state.password) {
 			alert("Error - Please fill out username and password");
 		} else if (this.state.password.length < 6) {
-			alert(`Password must be great than six characters`);
+			alert(`Password must be greater than six characters`);
 		} else {
 			API.saveUser({
 				username: this.state.username,
@@ -84,7 +85,7 @@ class LogInPage extends Component {
 				})
 				.catch(err => console.log(err));
 
-			alert(`Hello ${this.state.username}`);
+			// alert(`Hello ${this.state.username}`);
 		}
 
 		this.setState({
