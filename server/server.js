@@ -2,6 +2,9 @@ const morgan = require("morgan");
 const bodyParser = require("body-parser");
 const path = require("path");
 // var db = require('./models');
+// var session = require("express-session");
+// Requiring passport as we've configured it
+var passport = require("../config/passport");
 
 var express = require("express");
 
@@ -14,9 +17,18 @@ app.use(bodyParser.urlencoded({ extended: true }));
 
 app.use(express.static(path.join(__dirname, "../client/build")));
 
-app.get("/hello", function(req, res) {
-	res.send({ express: "Hello World. Server is up b*tchez" });
-});
+// We need to use sessions to keep track of our user's login status
+// app.use(session({ secret: "keyboard cat", resave: true, saveUninitialized: true }));
+app.use(passport.initialize());
+// app.use(passport.session());
+
+// Requiring our routes
+require("../routes/html-routes")(app);
+require("../routes/api-routes")(app);
+
+// app.get("/hello", function(req, res) {
+// 	res.send({ express: "Hello World. Server is up b*tchez" });
+// });
 
 app.use("/users", require("../routes/userRoutes"));
 
