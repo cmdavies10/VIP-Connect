@@ -39,7 +39,7 @@ passport.use(
 		{
 			clientID: process.env.GOOGLE_CLIENT_ID,
 			clientSecret: process.env.GOOGLE_CLIENT_SECRET,
-			callbackURL: "https://vip-fan.herokuapp.com/optionspage"
+			callbackURL: process.env.GOOGLE_CALLBACK_URL
 		},
 		function(accessToken, refreshToken, profile, done) {
 			db.User.findOrCreate({
