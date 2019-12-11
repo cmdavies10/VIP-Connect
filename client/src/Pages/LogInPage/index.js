@@ -165,6 +165,10 @@ class LogInPage extends Component {
 								Create User
 							</Button>
 
+							<Button href="/auth/google">
+								Sign In with Google
+							</Button>
+
 							{/* <Button variant="primary" type="submit" btn="rounded grow">
                   Create
                 </Button> */}
