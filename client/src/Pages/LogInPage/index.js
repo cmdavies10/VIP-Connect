@@ -4,6 +4,7 @@ import "./index.css";
 import Navbar from "react-bootstrap/Navbar";
 // import axios from "axios";
 import API from "../../utils/API";
+// import { Redirect } from "react-router-dom";
 import Form from "react-bootstrap/Form";
 import Container from "react-bootstrap/Container";
 import Button from "react-bootstrap/Button";
@@ -38,9 +39,7 @@ class LogInPage extends Component {
 		if (!this.state.username || !this.state.password) {
 			alert("Error - Please fill out username and password");
 		} else if (this.state.password.length < 6) {
-			alert(
-				`Choose a more secure password ${this.state.username} ${this.state.password}`
-			);
+			alert(`Password must be great than six characters`);
 		} else {
 			API.loginUser({
 				username: this.state.username,
