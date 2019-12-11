@@ -1,20 +1,20 @@
 import axios from "axios";
 
 export default {
-	// Gets all books
-	getUsers: function() {
-		return axios.get("/api/users");
+	checkUser: function() {
+		return axios.get("/login");
 	},
-	// Gets the book with the given id
-	getUser: function(id) {
+	getUserID: function(id) {
 		return axios.get("/api/users/" + id);
 	},
-	// Deletes the book with the given id
 	deleteUser: function(id) {
 		return axios.delete("/api/users/" + id);
 	},
 	// posts user to the database
 	loginUser: function(userData) {
 		return axios.post("/api/login", userData);
+	},
+	saveUser: function(userData) {
+		return axios.post("/api/signup", userData);
 	}
 };

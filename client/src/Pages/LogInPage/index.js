@@ -4,7 +4,8 @@ import "./index.css";
 import Navbar from "react-bootstrap/Navbar";
 // import axios from "axios";
 import API from "../../utils/API";
-// import { Redirect } from "react-router-dom";
+import { Redirect } from "react-router-dom";
+// import { useHistory } from "react-router-dom";
 import Form from "react-bootstrap/Form";
 import Container from "react-bootstrap/Container";
 import Button from "react-bootstrap/Button";
@@ -17,7 +18,8 @@ import { Link } from "react-router-dom";
 class LogInPage extends Component {
 	state = {
 		username: "",
-		password: ""
+		password: "",
+		redirect: false
 	};
 
 	handleInputChange = event => {
@@ -45,10 +47,41 @@ class LogInPage extends Component {
 				username: this.state.username,
 				password: this.state.password
 			})
+				// .then(res => console.log(res))
+				.then(res => {
+					this.setState({
+						redirect: true
+					});
+
+					// return <Redirect to="/optionspage" />;
+				})
+				.catch(err => console.log(err));
+
+			alert(`Hello ${this.state.username}`);
+		}
+
+		this.setState({
+			username: "",
+			password: ""
+		});
+	};
+
+	handleFormSubmit = event => {
+		event.preventDefault();
+
+		if (!this.state.username || !this.state.password) {
+			alert("Error - Please fill out username and password");
+		} else if (this.state.password.length < 6) {
+			alert(`Password must be great than six characters`);
+		} else {
+			API.saveUser({
+				username: this.state.username,
+				password: this.state.password
+			})
 				.then(res => console.log(res))
 				.catch(err => console.log(err));
 
-			alert(`Hello ${this.state.username} ${this.state.password}`);
+			alert(`Hello ${this.state.username}`);
 		}
 
 		this.setState({
@@ -58,6 +91,10 @@ class LogInPage extends Component {
 	};
 
 	render() {
+		if (this.state.redirect === true) {
+			return <Redirect to="/optionspage" />;
+		}
+
 		return (
 			<div className="container-background" id="tinted-image">
 				{/* /* ------------------logo-------------------------- */}
@@ -112,7 +149,17 @@ class LogInPage extends Component {
 								// onClick={() => this.handleSubmit()}
 								btn="rounded grow"
 							>
-								Submit
+								Sign-in
+							</Button>
+
+							<Button
+								variant="primary"
+								type="submit"
+								onClick={this.handleFormSubmit}
+								// onClick={() => this.handleSubmit()}
+								btn="rounded grow"
+							>
+								Create User
 							</Button>
 
 							{/* <Button variant="primary" type="submit" btn="rounded grow">
