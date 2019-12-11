@@ -19,7 +19,8 @@ class LogInPage extends Component {
 	state = {
 		username: "",
 		password: "",
-		redirect: false
+		login: false,
+		signup: false
 	};
 
 	handleInputChange = event => {
@@ -41,7 +42,7 @@ class LogInPage extends Component {
 		if (!this.state.username || !this.state.password) {
 			alert("Error - Please fill out username and password");
 		} else if (this.state.password.length < 6) {
-			alert(`Password must be great than six characters`);
+			alert(`Password must be greater than six characters`);
 		} else {
 			API.loginUser({
 				username: this.state.username,
@@ -50,10 +51,8 @@ class LogInPage extends Component {
 				// .then(res => console.log(res))
 				.then(res => {
 					this.setState({
-						redirect: true
+						login: true
 					});
-
-					// return <Redirect to="/optionspage" />;
 				})
 				.catch(err => console.log(err));
 
@@ -78,7 +77,11 @@ class LogInPage extends Component {
 				username: this.state.username,
 				password: this.state.password
 			})
-				.then(res => console.log(res))
+				.then(res => {
+					this.setState({
+						signup: true
+					});
+				})
 				.catch(err => console.log(err));
 
 			alert(`Hello ${this.state.username}`);
@@ -91,7 +94,7 @@ class LogInPage extends Component {
 	};
 
 	render() {
-		if (this.state.redirect === true) {
+		if (this.state.login === true || this.state.signup === true) {
 			return <Redirect to="/optionspage" />;
 		}
 
@@ -187,32 +190,44 @@ class LogInPage extends Component {
 					<Navbar.Toggle aria-controls="responsive-navbar-nav" />
 					<Navbar.Collapse id="responsive-navbar-nav">
 						<Nav className="mr-auto">
-							<Link className="btn" to="/loginpage">
+							<Link className="btn" to="/">
 								Home
 							</Link>
 							{/* <Nav.Link href="#features">Home</Nav.Link> */}
 						</Nav>
 						<Nav>
-							<Link className="btn" to="/optionspage">
+							<Link
+								className="btn"
+								onClick={this.handleFormSubmit}
+								// to="/optionspage"
+							>
 								See Events
 							</Link>
 							{/* <Nav.Link class="text" href="#pricing">See Events</Nav.Link> */}
 
-							<Link className="btn" to="/buypage">
+							<Link
+								className="btn"
+								onClick={this.handleFormSubmit}
+								// to="/buypage"
+							>
 								Buy
 							</Link>
 							{/* <Nav.Link href="#features">Buy</Nav.Link> */}
 
-							<Link className="btn" to="/eventformpage">
+							{/* <Link className="btn" to="/eventformpage">
 								Contact Us
-							</Link>
+							</Link> */}
 
-							<Link className="btn" to="/eventformpage">
+							{/* <Link className="btn" to="/eventformpage">
 								Create
-							</Link>
+							</Link> */}
 							{/* <Nav.Link href="#features">Create</Nav.Link> */}
 
-							<Link className="btn" to="/ticketpage">
+							<Link
+								className="btn"
+								onClick={this.handleFormSubmit}
+								// to="/ticketpage"
+							>
 								My Tickets
 							</Link>
 							{/* <Nav.Link href="#pricing">My Tickets</Nav.Link> */}

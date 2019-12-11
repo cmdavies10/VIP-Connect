@@ -1,12 +1,12 @@
-import React from 'react';
-import './index.css';
-import Card from 'react-bootstrap/Card';
-import Button from 'react-bootstrap/Button';
-import Container from 'react-bootstrap/Container';
-import Navbar from 'react-bootstrap/Navbar';
-import Nav from 'react-bootstrap/Nav';
-import Carousel from 'react-bootstrap/Carousel';
-import { Link } from 'react-router-dom';
+import React from "react";
+import "./index.css";
+import Card from "react-bootstrap/Card";
+// import Button from "react-bootstrap/Button";
+import Container from "react-bootstrap/Container";
+import Navbar from "react-bootstrap/Navbar";
+import Nav from "react-bootstrap/Nav";
+import Carousel from "react-bootstrap/Carousel";
+import { Link } from "react-router-dom";
 
 export default function OptionsPage() {
 	return (
@@ -37,7 +37,10 @@ export default function OptionsPage() {
 						/>
 						<Carousel.Caption>
 							<h3>Dinner with your favorite Band </h3>
-							<p1>Dates might change depending on the availability of the artist</p1>
+							<p>
+								Dates might change depending on the availability
+								of the artist
+							</p>
 						</Carousel.Caption>
 					</Carousel.Item>
 					<Carousel.Item>
@@ -49,18 +52,28 @@ export default function OptionsPage() {
 
 						<Carousel.Caption>
 							<h3>Meet the Band at back stage </h3>
-							<p1>Photo opportunities have to be limited to respect Star's privacy</p1>
+							<p>
+								Photo opportunities have to be limited to
+								respect Star's privacy
+							</p>
 						</Carousel.Caption>
 					</Carousel.Item>
 					<Carousel.Item>
 						<img
 							className="d-block w-100"
 							src="https://cdn.firespring.com/images/96d50d65-35dd-4119-ae9d-bc8467de93fa.jpeg"
+							alt=""
 						/>
 
 						<Carousel.Caption>
-							<h3>"All Within My Hands" foundation will receive 10%</h3>
-							<p1>Your purchase / donation will benefit METALLICA's favorite charity </p1>
+							<h3>
+								"All Within My Hands" foundation will receive
+								10%
+							</h3>
+							<p>
+								Your purchase / donation will benefit
+								METALLICA's favorite charity{" "}
+							</p>
 						</Carousel.Caption>
 					</Carousel.Item>
 				</Carousel>
@@ -111,13 +124,18 @@ export default function OptionsPage() {
 							<Card.Title>Metallica 2020 Tour</Card.Title>
 							<p>Live : 10/29/2020</p>
 							<p>Location: New York</p>
-							<p>Your Bid: Dinner after Concert with one of the stars</p>
+							<p>
+								Your Bid: Dinner after Concert with one of the
+								stars
+							</p>
 							<h2>Make you best offer!</h2>
 							<Card.Text>
-								All exclusive experience a dinner with your favorite Band at the most elegant private
-								dining rooms in Mayfair awarded a Michelin star. Proceeds will got to All Within My
-								Hands to assist the lives of members of the communities who have supported the band for
-								years.
+								All exclusive experience a dinner with your
+								favorite Band at the most elegant private dining
+								rooms in Mayfair awarded a Michelin star.
+								Proceeds will got to All Within My Hands to
+								assist the lives of members of the communities
+								who have supported the band for years.
 							</Card.Text>
 							{/* <Button variant="primary">Buy Ticket</Button> */}
 							<Link className="btn" to="/buypage">
